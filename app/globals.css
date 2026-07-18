@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+/* Tailwind v4 auto-scans the whole project for class names; these folders
+   are reference material (Stitch mockups, skills, docs), not app code, and
+   their Tailwind-class-like text was leaking unused utilities into the
+   bundle (e.g. the WhatsApp-green swatch from design/ mockups). */
+@source not "../design";
+@source not "../docs";
+@source not "../.claude";
+
+/*
+ * Anar Jewellery design tokens — ported verbatim from the Stitch exports in
+ * `design/` (cross-checked across all 20 `code.html` files, not just DESIGN.md's
+ * summary — see docs/phase_1/architecture.md for the borderRadius discrepancy
+ * this caught). Storefront has no dark mode; admin dark mode (Wave C) uses the
+ * `class` strategy separately and does not touch these base tokens.
+ */
+@theme {
+  /* Colors (Material-3-style token set from Stitch) */
+  --color-surface: #fcf9f3;
+  --color-surface-dim: #dcdad4;
+  --color-surface-bright: #fcf9f3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f3ed;
+  --color-surface-container: #f0eee8;
+  --color-surface-container-high: #ebe8e2;
+  --color-surface-container-highest: #e5e2dc;
+  --color-surface-variant: #e5e2dc;
+  --color-surface-tint: #5f5e5a;
+  --color-surface-muted: #f2efe9;
+  --color-on-surface: #1c1c18;
+  --color-on-surface-variant: #474741;
+  --color-inverse-surface: #31312d;
+  --color-inverse-on-surface: #f3f0ea;
+
+  --color-primary: #5f5e5a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #f9f6f0;
+  --color-on-primary-container: #72706c;
+  --color-inverse-primary: #c9c6c1;
+  --color-primary-fixed: #e5e2dc;
+  --color-primary-fixed-dim: #c9c6c1;
+  --color-on-primary-fixed: #1c1c18;
+  --color-on-primary-fixed-variant: #474743;
+
+  --color-secondary: #775a19;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fed488;
+  --color-on-secondary-container: #785a1a;
+  --color-secondary-fixed: #ffdea5;
+  --color-secondary-fixed-dim: #e9c176;
+  --color-on-secondary-fixed: #261900;
+  --color-on-secondary-fixed-variant: #5d4201;
+
+  --color-tertiary: #5f5e5e;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #f9f6f5;
+  --color-on-tertiary-container: #727070;
+  --color-tertiary-fixed: #e5e2e1;
+  --color-tertiary-fixed-dim: #c8c6c5;
+  --color-on-tertiary-fixed: #1c1b1b;
+  --color-on-tertiary-fixed-variant: #474746;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-outline: #787770;
+  --color-outline-variant: #c8c7be;
+  --color-background: #fcf9f3;
+  --color-on-background: #1c1c18;
+
+  /* Brand accents (used sparingly, per DESIGN.md) */
+  --color-ivory-base: #f9f6f0;
+  --color-antique-gold: #c5a059;
+  --color-charcoal-text: #1a1a1a;
+  --color-gold-light: #e3d2b0;
+  --color-gold-dark: #9e7b3b;
+
+  /* Spacing (used in markup via padding, margin, gap, and max-width utilities) */
+  --spacing-container-max: 1280px;
+  --spacing-gutter: 24px;
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 20px;
+  --spacing-section-gap: 80px;
+  --spacing-stack-sm: 8px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 24px;
+
+  /* Font families — Inter (UI/body) + Playfair Display (headings), self-hosted
+     via next/font/google in app/[locale]/layout.tsx */
+  --font-label-sm: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-label-md: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-title-lg: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-body-md: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-body-lg: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-headline-sm: var(--font-playfair), Georgia, serif;
+  --font-headline-md: var(--font-playfair), Georgia, serif;
+  --font-display-lg-mobile: var(--font-playfair), Georgia, serif;
+  --font-display-lg: var(--font-playfair), Georgia, serif;
+
+  /* Font sizes, bundled with line-height/weight/letter-spacing per token */
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--font-weight: 600;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--font-weight: 500;
+  --text-label-md--letter-spacing: 0.05em;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-title-lg: 20px;
+  --text-title-lg--line-height: 28px;
+  --text-title-lg--font-weight: 600;
+
+  --text-headline-sm: 24px;
+  --text-headline-sm--line-height: 32px;
+  --text-headline-sm--font-weight: 600;
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 40px;
+  --text-headline-md--font-weight: 600;
+
+  --text-display-lg-mobile: 32px;
+  --text-display-lg-mobile--line-height: 40px;
+  --text-display-lg-mobile--font-weight: 700;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--font-weight: 700;
+  --text-display-lg--letter-spacing: -0.02em;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-body-md);
+}
