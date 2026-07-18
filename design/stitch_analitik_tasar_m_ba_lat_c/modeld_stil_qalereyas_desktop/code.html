@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="az"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modeldə - Anar Jewellery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "inverse-on-surface": "#f3f0ea",
+                        "primary-container": "#f9f6f0",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "background": "#fcf9f3",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-background": "#1c1c18",
+                        "surface-dim": "#dcdad4",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "outline": "#787770",
+                        "secondary": "#775a19",
+                        "on-surface-variant": "#474741",
+                        "on-primary-fixed": "#1c1c18",
+                        "tertiary-container": "#f9f6f5",
+                        "primary": "#5f5e5a",
+                        "primary-fixed": "#e5e2dc",
+                        "surface-container": "#f0eee8",
+                        "on-secondary-fixed": "#261900",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-secondary-container": "#785a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#727070",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e5e2dc",
+                        "surface-container-high": "#ebe8e2",
+                        "tertiary": "#5f5e5e",
+                        "outline-variant": "#c8c7be",
+                        "ivory-base": "#F9F6F0",
+                        "gold-dark": "#9E7B3B",
+                        "inverse-surface": "#31312d",
+                        "charcoal-text": "#1A1A1A",
+                        "secondary-fixed": "#ffdea5",
+                        "surface-tint": "#5f5e5a",
+                        "on-primary-container": "#72706c",
+                        "gold-light": "#E3D2B0",
+                        "secondary-container": "#fed488",
+                        "surface": "#fcf9f3",
+                        "inverse-primary": "#c9c6c1",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-primary-fixed-variant": "#474743",
+                        "on-surface": "#1c1c18",
+                        "surface-container-low": "#f6f3ed",
+                        "surface-container-highest": "#e5e2dc",
+                        "surface-bright": "#fcf9f3",
+                        "primary-fixed-dim": "#c9c6c1",
+                        "on-error-container": "#93000a",
+                        "antique-gold": "#C5A059",
+                        "surface-muted": "#F2EFE9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "margin-desktop": "64px",
+                        "section-gap": "80px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "8px",
+                        "stack-lg": "24px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+        
+        /* Subtle image hover zoom */
+        .lookbook-image-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .lookbook-image {
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .lookbook-item:hover .lookbook-image {
+            transform: scale(1.03);
+        }
+        
+        /* Thumbnail reveal */
+        .shop-look-overlay {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease;
+        }
+        .lookbook-item:hover .shop-look-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-ivory-base text-charcoal-text font-body-md min-h-screen antialiased flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface shadow-[0px_4px_20px_rgba(26,26,26,0.04)] docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Navigation Links (Web) -->
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300" href="#">Ana səhifə</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300" href="#">Üzüklər</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300" href="#">Boyunbağılar</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300" href="#">Sırğalar</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300" href="#">Qolbaqlar</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300" href="#">Dəstlər</a>
+</nav>
+<!-- Brand -->
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-surface-bright flex-shrink-0">
+                Anar Jewellery
+            </div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4">
+<button aria-label="Search" class="text-on-surface-variant hover:text-gold-dark transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button aria-label="Person" class="text-on-surface-variant hover:text-gold-dark transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button aria-label="Shopping Bag" class="text-on-surface-variant hover:text-gold-dark transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-12">
+<!-- Page Header -->
+<div class="text-center mb-16 max-w-2xl mx-auto">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-charcoal-text mb-4">Modeldə</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Qızıl zinət əşyalarımızın real həyatda, incə zövqlə necə canlandığını kəşf edin. Hər bir detal xüsusi anlar üçün düşünülüb.
+            </p>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap justify-center gap-3 mb-16">
+<button class="px-6 py-2 rounded-full border border-antique-gold bg-antique-gold text-surface-container-lowest font-label-md text-label-md transition-all hover:bg-gold-dark">Bütün</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant bg-transparent font-label-md text-label-md transition-all hover:border-antique-gold hover:text-antique-gold">Üzüklər</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant bg-transparent font-label-md text-label-md transition-all hover:border-antique-gold hover:text-antique-gold">Boyunbağılar</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant bg-transparent font-label-md text-label-md transition-all hover:border-antique-gold hover:text-antique-gold">Sırğalar</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant bg-transparent font-label-md text-label-md transition-all hover:border-antique-gold hover:text-antique-gold">Qolbaqlar</button>
+</div>
+<!-- Editorial Masonry Grid -->
+<div class="masonry-grid">
+<!-- Look 1 -->
+<div class="masonry-item lookbook-item group cursor-pointer relative">
+<div class="lookbook-image-container rounded-xl bg-surface-container shadow-[0px_4px_20px_rgba(26,26,26,0.04)]">
+<img class="lookbook-image w-full h-auto object-cover rounded-xl" data-alt="A sophisticated editorial photograph of a model wearing elegant gold necklaces and small hoop earrings. The lighting is soft and warm, characteristic of high-end jewelry campaigns. The background is a muted ivory tone. The focus is sharp on the gold details, emphasizing luxury and craftsmanship in a modern, minimalist setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIakfdMKB07KUBn2fUYRsfVdfzq-ZxdckqkNGHJHIZHwQ_dlbhMgjgQmnc0AQ3cZ4wRge-ZBYRASrMUQlot0oTU34z80UfYOtlDuyciT2CXhZds8_qF361QTZ-Jbq_TcsIMBiC2CyvXG9iHk2tkTVo5aUuVbonGkrmp2FdZyMJJA3vIJBecsixRvulaSurJnM2J6JI8KfN2zy-BU0P9OeXVwqdq7s24sPM7bBDM8tCnwtj1je_qND1roZNfzBWTb963fgu39Uc0rG7" style="min-height: 400px;"/>
+<!-- AI Badge -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-sm px-3 py-1 rounded-full border border-surface-variant flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">auto_awesome</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Süni intellektlə hazırlanmış görüntü</span>
+</div>
+<!-- Shop the Look Overlay -->
+<div class="shop-look-overlay absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-charcoal-text/80 via-charcoal-text/40 to-transparent flex justify-center gap-3 rounded-b-xl">
+<div class="w-12 h-12 rounded-full border-2 border-surface-container-lowest bg-surface overflow-hidden shadow-lg hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="A high-quality close-up product shot of a delicate gold pendant necklace on a pure white background. The lighting highlights the polished gold texture and subtle curves. Minimalist luxury jewelry photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0cgErUKRLceyJjCtcU2VdvTnHsayytpNboMIs4uKdsd1SUAL9Haup34Nme7O1CEJ_eLwmV1Gcugu4VWK7bzTjATcZJWiL55FZeWFqwuv3zRmw3shR19KDB8_8OClbPrv-DvOP6R1zIe_5TMNfr9Sibdiz_fgaOgNwFk_gxbW64fx0s6szjbzAIdnaBC4W5vxevLL8er-ciyEIprwO7qV1nOir6kR3EYuy8bZmYMDK4yMoVuILVEte4-yoWYrvnfTJTtStN55Brp4F"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-surface-container-lowest bg-surface overflow-hidden shadow-lg hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="A high-quality close-up product shot of minimalist gold hoop earrings on a pure white background. The light reflects softly off the polished surface, creating a sense of refined elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUxt2-tcRe2TxOKoEdN7er9wpX0C1LfkbCGSPP9julwT5zMctD1Ky1wO5T-3r63EEzhvlCo5rWfxBaFx5JkVGRQSNMm2BVe1ABiGM-XgPJof1CqiHDETBTw5jTr9Wj3k0UX-OpkxUYMGXAAOUm_4Jb6p2Nxdna3Ir64tEtwHZ2YxZTK24ZecMrIN0H5Jjq815aDZBylWN_9P8rjC0k8kxLo7N3zfYUQBVjFDxQhrHmroirQcsff9EdzNxP-5X__OB40J_DOwtgMSqj"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Look 2 -->
+<div class="masonry-item lookbook-item group cursor-pointer relative">
+<div class="lookbook-image-container rounded-xl bg-surface-container shadow-[0px_4px_20px_rgba(26,26,26,0.04)]">
+<img class="lookbook-image w-full h-auto object-cover rounded-xl" data-alt="A close-up editorial shot focusing on a model's hands gracefully resting, adorned with multiple stacked gold rings featuring intricate details. The lighting is dramatic yet warm, casting soft shadows that highlight the golden hues against a neutral, creamy background. Quiet luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPnS58-t6x91dEcSxZ-Qg9ToSEzpHqHwLKOg1j_QdDIe7g1_S2TJwuHTTjIobqeMK6ravYVGQ3f-p6DN283BoZ1_LAVG1wWUtiqPK4TSAFCEVam6lXKYHDUyrst_nqoTtzPGVRuL9_qXcIcveX7NXTElJUQXG9dCEgwmJ5sfpDHxxr81AQ5O5dZcshs5XTO1-NffBcVgaomzcQlgd2EyZmKaKqXZReljPyc1znnN8SSLk1qtruZsI1xkPYZpgzuAvTlhdt_rzYopJC" style="min-height: 300px;"/>
+<!-- AI Badge -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-sm px-3 py-1 rounded-full border border-surface-variant flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">auto_awesome</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Süni intellektlə hazırlanmış görüntü</span>
+</div>
+<!-- Shop the Look Overlay -->
+<div class="shop-look-overlay absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-charcoal-text/80 via-charcoal-text/40 to-transparent flex justify-center gap-3 rounded-b-xl">
+<div class="w-12 h-12 rounded-full border-2 border-surface-container-lowest bg-surface overflow-hidden shadow-lg hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="A detailed product photography shot of a thick, textured gold ring on a pristine white background. The craftsmanship is evident in the polished ridges. Luxury jewelry aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJz5NaqNCK21_7hnW3WLmemy8XLSXEUFV5HyKNPz6Mmjas0cuyCFK-vX36as-5RIa8lRz-Onye1STzAy--DWWvOdpgRvEJ2iK1TK1fbmpUxOl-qgL2F_7hxRDGpUiRaOFvZvV8b8d_YajzBrvYnB9RiEqDgEVR7l-An8lWxt4TvV13BGUzC5XyipJ2GOM9FZOLBoRVZ8_BkbnEXmSzEd_VPh1oetWwQ-osm-8eoT5IhA1I2ni7rf338rOt15RM-MKWTgOwymOD45NM"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-surface-container-lowest bg-surface overflow-hidden shadow-lg hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="A detailed product photography shot of a slim, elegant gold band ring with a tiny subtle diamond inset, presented on a bright white background. Minimalist and refined." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD08oF7_DXGJ8Wd7nr3698p7qu-bj2sC06w7Y7XDulK_wrDLG0NMRyWklMQprwrJ77yGKn37z8tSf07lFIYoMSL5qS2nKsBA4Z04GW94xCa-VEeqhkY4YBNQNY4AB3Ko02P6p686EsGSkoiw1a5ziMyDxheYQ1qzwiJnawpK_q1RLCUcWubhrpKVN8Anc2aVPlk7Tpna8D0rvo9-LDwBUmFpWTSsweqDLpLKSUWOnjX8RBcrj_J_A-cxKM78Vj3zD5f4WXfq0C9tl9K"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Look 3 -->
+<div class="masonry-item lookbook-item group cursor-pointer relative">
+<div class="lookbook-image-container rounded-xl bg-surface-container shadow-[0px_4px_20px_rgba(26,26,26,0.04)]">
+<img class="lookbook-image w-full h-auto object-cover rounded-xl" data-alt="A stunning portrait of a model looking slightly away from the camera, highlighting elegant long drop gold earrings and a delicate chain bracelet. The mood is serene and refined, with warm, organic lighting that brings out the luster of the gold against a soft ivory backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv_E_OkcsfyJvyfE9Fv3yTAn8U4TeB7Sq2O4uHPXAk3PJDScooS2pbx4PrK85eO1LrU6LigdlYKVZE1liq3hMdVO-KFuzcvXSngh_bnaH-eah5HeiiLPi6FB_wWNopUH7hN1_RZZy1qCY2UUsZe6DjYjDNAZoe_nAwKizQ8vRyFHGSsLDEEmyT6XlkR5fa5pKls0h9bIITcXUnPn-1qSno6iljAKEoFUaXWJv0LOVeyb7GcA1SZ1x4P37rwQk2g0cTpEyZ4S4fnSsd" style="min-height: 500px;"/>
+<!-- AI Badge -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-sm px-3 py-1 rounded-full border border-surface-variant flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">auto_awesome</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Süni intellektlə hazırlanmış görüntü</span>
+</div>
+<!-- Shop the Look Overlay -->
+<div class="shop-look-overlay absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-charcoal-text/80 via-charcoal-text/40 to-transparent flex justify-center gap-3 rounded-b-xl">
+<div class="w-12 h-12 rounded-full border-2 border-surface-container-lowest bg-surface overflow-hidden shadow-lg hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Product shot of elegant, long drop gold earrings against a pure white background. The earrings feature a delicate chain design, gleaming softly under studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCapsiyJH-h8pT2v0vmkROHwOOmei-0zQ3CJHjfVQcNNgRZEPJUKJdPqdlQN2Ro-VemOTo1vIfrzEiuS1T1rd46H6s8URSglLOAiISITCD-Ay2aJeLnw8py86XDt3sztn8Qb5KVgJ22c-7HFcZJUbTygaLoo8JX7cKsxnHTbdn9cnuOng0uFLz-i_IJILUYmTE3cxj4KCkI_79D2OG65vW7oU_apq-cISKqtv4H_Bc8J1B77u4LusD5xWH5aX9pCLK7Dzksjvj6v69F"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Look 4 -->
+<div class="masonry-item lookbook-item group cursor-pointer relative">
+<div class="lookbook-image-container rounded-xl bg-surface-container shadow-[0px_4px_20px_rgba(26,26,26,0.04)]">
+<img class="lookbook-image w-full h-auto object-cover rounded-xl" data-alt="An editorial style image focusing on a model's wrist wearing a solid gold cuff bracelet alongside a finer chain bracelet. The lighting is bright and airy, highlighting the polished surface of the cuff. The aesthetic is modern, clean, and luxurious, fitting a high-end jewelry catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBveLKIcUjCyGiqzNnVx6M3H7N740_JsQS0Q-9DN6N0Yez3Mw7dlT-1RoMZsRgxNZnTHq-8cYEBYgu-xnkU-IBEm5PreThUVY-nnbVOSmunZAu-3t6u-6zekqiLETSlZ3mmQu9nwrFf9uAX0BeT8-0eRVuEnIXLY4PNpGIyC5uLovPb-AAb2SLpoypkdJQbGZoGlZyAzvs-IaSXvfHIGL6Q7Qmk1v8HKF7mCjPKwoknqccJ6V0PXhF-CGCt-W1CTM2Vv7jguuHofILw" style="min-height: 350px;"/>
+<!-- AI Badge -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-sm px-3 py-1 rounded-full border border-surface-variant flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">auto_awesome</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Süni intellektlə hazırlanmış görüntü</span>
+</div>
+<!-- Shop the Look Overlay -->
+<div class="shop-look-overlay absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-charcoal-text/80 via-charcoal-text/40 to-transparent flex justify-center gap-3 rounded-b-xl">
+<div class="w-12 h-12 rounded-full border-2 border-surface-container-lowest bg-surface overflow-hidden shadow-lg hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="High-resolution product image of a solid gold cuff bracelet on a white background. The gold has a highly polished, mirror-like finish, signifying premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu39B2dw2VbrT2zeBKEGZz4ENbt17CW3tYr6lLggHROaeB6DQ3sC-TmH-qXR-IrpGE4NUW9jbbPau1n1ezaAofytTfKTy1GjAt--vtlZrau6rWCuvqb3elQSJgrJJ04tWv605Ru41s4OtjXaIakzghOBwXSXeX13LBjvzkaz3iphAHw_b9SbdOAVJE2U9czqey75EEjhDb_efqhI_gc-cHn4eYWtqBqQnIdWpg7ykJUASWX_Anr9KSYoO7RnXqGypmSEbdHmKjPC_e"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white dark:bg-inverse-surface border-t border-outline-variant shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-low transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-sm text-label-sm">Ana səhifə</span>
+</a>
+<a class="flex flex-col items-center justify-center text-antique-gold font-bold active:bg-surface-container-low scale-95 transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-label-sm text-label-sm">Kateqoriyalar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-low transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">calculate</span>
+<span class="font-label-sm text-label-sm">Hesabla</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-low transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">chat</span>
+<span class="font-label-sm text-label-sm">Əlaqə</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-stack-lg bg-surface-container dark:bg-inverse-surface border-t border-outline-variant mt-24">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm text-on-surface dark:text-surface-bright mb-4">Anar Jewellery</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Zərifliyin və keyfiyyətin ünvanı.</p>
+</div>
+<div class="col-span-1 md:col-span-2 grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-3">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">Haqqımızda</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">WhatsApp ilə əlaqə</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">Tez-tez verilən suallar</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">Çatdırılma şərtləri</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 flex items-end md:justify-end">
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant">© 2024 Anar Jewellery. Bütün hüquqlar qorunur.</p>
+</div>
+</footer>
+</body></html>

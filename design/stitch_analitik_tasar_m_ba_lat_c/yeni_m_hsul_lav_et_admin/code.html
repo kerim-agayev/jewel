@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="az"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yeni Məhsul - Anar Jewellery Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "secondary-fixed-dim": "#e9c176",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#ebe8e2",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed-dim": "#c9c6c1",
+                      "outline-variant": "#c8c7be",
+                      "surface-container-highest": "#e5e2dc",
+                      "outline": "#787770",
+                      "primary-fixed": "#e5e2dc",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "surface": "#fcf9f3",
+                      "on-primary-fixed": "#1c1c18",
+                      "surface-muted": "#F2EFE9",
+                      "secondary": "#775a19",
+                      "surface-variant": "#e5e2dc",
+                      "on-surface": "#1c1c18",
+                      "on-secondary-container": "#785a1a",
+                      "antique-gold": "#C5A059",
+                      "on-background": "#1c1c18",
+                      "tertiary": "#5f5e5e",
+                      "inverse-on-surface": "#f3f0ea",
+                      "surface-tint": "#5f5e5a",
+                      "on-tertiary-container": "#727070",
+                      "background": "#fcf9f3",
+                      "surface-dim": "#dcdad4",
+                      "on-secondary": "#ffffff",
+                      "gold-light": "#E3D2B0",
+                      "on-error-container": "#93000a",
+                      "primary": "#5f5e5a",
+                      "on-primary-container": "#72706c",
+                      "tertiary-fixed": "#e5e2e1",
+                      "secondary-fixed": "#ffdea5",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "on-secondary-fixed": "#261900",
+                      "on-surface-variant": "#474741",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "gold-dark": "#9E7B3B",
+                      "tertiary-container": "#f9f6f5",
+                      "surface-container": "#f0eee8",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f6f3ed",
+                      "on-primary-fixed-variant": "#474743",
+                      "inverse-surface": "#31312d",
+                      "ivory-base": "#F9F6F0",
+                      "surface-bright": "#fcf9f3",
+                      "primary-container": "#f9f6f0",
+                      "secondary-container": "#fed488",
+                      "inverse-primary": "#c9c6c1",
+                      "charcoal-text": "#1A1A1A"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "16px",
+                      "stack-sm": "8px",
+                      "stack-lg": "24px",
+                      "container-max": "1280px",
+                      "section-gap": "80px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "title-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #dcdad4;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased overflow-hidden h-screen flex">
+<!-- SideNavBar -->
+<nav class="h-screen w-64 fixed left-0 top-0 bg-ivory-base border-r border-outline-variant z-40 hidden md:flex flex-col">
+<div class="px-6 py-8">
+<h1 class="font-display-lg text-headline-sm text-charcoal-text">Anar Jewellery</h1>
+<p class="font-label-sm text-label-sm text-tertiary mt-1">Admin Dashboard</p>
+</div>
+<div class="flex flex-col h-full py-6 flex-grow">
+<a class="flex items-center gap-3 px-4 py-3 text-tertiary hover:bg-surface-container-low transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+<span>Panel</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-antique-gold font-semibold border-r-4 border-antique-gold bg-surface-container-high transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<span>Məhsullar</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-tertiary hover:bg-surface-container-low transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+<span>Satışlar</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-tertiary hover:bg-surface-container-low transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">group</span>
+<span>Müştərilər (Tezliklə)</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-tertiary hover:bg-surface-container-low transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">analytics</span>
+<span>Hesabatlar</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-tertiary hover:bg-surface-container-low transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+<span>Parametrlər</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-64 relative h-full">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 h-16 bg-white border-b border-outline-variant fixed top-0 right-0 left-0 md:left-64 flex justify-between items-center px-gutter z-30">
+<div class="flex items-center gap-4 w-full max-w-md">
+<div class="relative w-full flex items-center bg-surface-container-low rounded-full px-4 py-2 focus-within:ring-1 focus-within:ring-antique-gold transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined text-tertiary mr-2">search</span>
+<input class="bg-transparent border-none outline-none w-full font-label-md text-label-md text-primary placeholder:text-tertiary-fixed-dim focus:ring-0 p-0" placeholder="Axtarış..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-tertiary hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-tertiary hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant ml-2">
+<img alt="Admin User Profile" class="object-cover w-full h-full" data-alt="A macro shot of a finely crafted gold ring reflecting warm, muted lighting in a sophisticated studio setting. The backdrop is a smooth, ivory-colored surface. The composition is centered and evokes a sense of quiet luxury, with deep shadows and soft highlights highlighting the intricate details of the jewelry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsigocGvR05eJLJqf5A2e-F61Rw5cg5-GuGimq9FGSIFdhV1nLoIol_o2muzd3c3vKznilNLiUUBrJTwB4n63OZ6HEUfx62JbYHINB6iTZz-lDxCDzKbqZbdSIZpyIeyTLwWVyBY4YaQO_MzNgoiKp16b35lpw89EjuM1r-CfCwg2KYGDjgcuo7ia0Lg6NqXuEBOSjkI62Ydooc2cZHFXta1df3tdpaOmWkunLZr1OThTXhDYT_IZ9i3ibPv6csgYk_ET4p5wt1Dq3"/>
+</div>
+</div>
+</header>
+<!-- Form Content Container -->
+<main class="flex-1 overflow-y-auto custom-scrollbar mt-16 pb-24 bg-surface-muted px-4 md:px-8 py-8">
+<div class="max-w-4xl mx-auto">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-sm text-headline-sm text-charcoal-text">Yeni Məhsul</h2>
+<a class="text-tertiary hover:text-antique-gold flex items-center gap-1 font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                        Geriyə
+                    </a>
+</div>
+<form class="space-y-6">
+<!-- 1. Basic Info -->
+<div class="bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,26,26,0.04)] border border-outline-variant/30">
+<h3 class="font-title-lg text-title-lg text-charcoal-text border-b border-outline-variant pb-3 mb-5">Əsas Məlumatlar</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Ad (AZ)</label>
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all placeholder:text-tertiary-fixed-dim" placeholder="Məsələn: Brilyant qaşlı qızıl üzük" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Ad (RU)</label>
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all placeholder:text-tertiary-fixed-dim" placeholder="Например: Золотое кольцо с бриллиантом" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Kateqoriya</label>
+<div class="relative">
+<select class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all appearance-none cursor-pointer">
+<option disabled="" selected="" value="">Seçin...</option>
+<option value="uzuk">Üzük</option>
+<option value="sirga">Sırğa</option>
+<option value="boyunbagi">Boyunbağı</option>
+<option value="qolbag">Qolbaq</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-tertiary pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Cins</label>
+<div class="relative">
+<select class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all appearance-none cursor-pointer">
+<option value="qadin">Qadın</option>
+<option value="kisi">Kişi</option>
+<option value="usaq">Uşaq</option>
+<option value="unisex">Unisex</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-tertiary pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between bg-surface-container-low p-4 rounded-lg border border-outline-variant/50">
+<div>
+<p class="font-label-md text-label-md text-charcoal-text font-semibold">Məhsul Vəziyyəti</p>
+<p class="font-label-sm text-label-sm text-tertiary mt-1">Bu məhsul yenidir yoxsa işlənmiş?</p>
+</div>
+<div class="flex bg-surface-variant p-1 rounded-lg">
+<button class="px-4 py-1.5 rounded-md bg-white shadow-sm font-label-md text-label-md text-charcoal-text" type="button">Yeni</button>
+<button class="px-4 py-1.5 rounded-md text-tertiary hover:text-charcoal-text font-label-md text-label-md transition-colors" type="button">İşlənmiş</button>
+</div>
+</div>
+</div>
+<!-- 2. Pricing Type -->
+<div class="bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,26,26,0.04)] border border-outline-variant/30" x-data="{ pricingMode: 'auto' }">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-outline-variant pb-4 mb-5">
+<h3 class="font-title-lg text-title-lg text-charcoal-text mb-4 sm:mb-0">Qiymətləndirmə Növü</h3>
+<div class="flex bg-surface-variant p-1 rounded-lg self-start sm:self-auto">
+<button class="px-4 py-1.5 rounded-md bg-white shadow-sm font-label-md text-label-md text-charcoal-text transition-all" type="button">Avtomatik</button>
+<button class="px-4 py-1.5 rounded-md text-tertiary hover:text-charcoal-text font-label-md text-label-md transition-all" type="button">Sabit qiymət</button>
+</div>
+</div>
+<!-- Auto Pricing Fields -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-pricing-fields">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Metal Növü</label>
+<div class="relative">
+<select class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all appearance-none cursor-pointer">
+<option value="qizil">Qızıl</option>
+<option value="ag_qizil">Ağ Qızıl</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-tertiary pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Əyar (Purity)</label>
+<div class="relative">
+<select class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all appearance-none cursor-pointer">
+<option value="585">585</option>
+<option value="750">750</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-tertiary pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Çəki (qram)</label>
+<div class="relative">
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all placeholder:text-tertiary-fixed-dim pr-10" placeholder="0.00" step="0.01" type="number"/>
+<span class="absolute right-4 top-2.5 text-tertiary font-label-md">qr</span>
+</div>
+</div>
+<div class="space-y-2 md:col-span-2">
+<label class="font-label-md text-label-md text-primary">İşçilik xərci (Labor cost)</label>
+<div class="flex gap-4 items-center">
+<div class="flex-1 relative">
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all placeholder:text-tertiary-fixed-dim" placeholder="0.00" step="0.01" type="number"/>
+</div>
+<div class="flex bg-surface-variant p-1 rounded-lg shrink-0">
+<button class="px-3 py-1.5 rounded-md text-tertiary hover:text-charcoal-text font-label-md text-label-md transition-colors" type="button">%</button>
+<button class="px-3 py-1.5 rounded-md bg-white shadow-sm font-label-md text-label-md text-charcoal-text" type="button">AZN</button>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Marja (%)</label>
+<div class="relative">
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all placeholder:text-tertiary-fixed-dim pr-10" placeholder="0" type="number"/>
+<span class="absolute right-4 top-2.5 text-tertiary font-label-md">%</span>
+</div>
+</div>
+</div>
+<!-- Price Calculation Summary Box (Informational) -->
+<div class="mt-6 bg-ivory-base border border-outline-variant/50 rounded-lg p-5 flex flex-col md:flex-row gap-6 justify-between items-center auto-pricing-fields">
+<div class="flex gap-8 w-full md:w-auto">
+<div>
+<p class="font-label-sm text-label-sm text-tertiary">Baza Qızıl Dəyəri</p>
+<p class="font-body-lg text-body-lg text-charcoal-text font-semibold mt-1">~0.00 AZN</p>
+</div>
+<div class="hidden sm:block w-px bg-outline-variant/50 h-10 self-center"></div>
+<div>
+<p class="font-label-sm text-label-sm text-tertiary">Yekun Təxmini Qiymət</p>
+<p class="font-headline-sm text-headline-sm text-antique-gold mt-1">0.00 AZN</p>
+</div>
+</div>
+<div class="w-full md:w-64 space-y-2">
+<label class="font-label-sm text-label-sm text-primary flex items-center justify-between">
+<span>Override (Sabit) Qiymət</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary" title="Avtomatik hesablamanı ləğv etmək üçün bura məbləğ yazın">info</span>
+</label>
+<div class="relative">
+<input class="w-full bg-white border border-outline-variant rounded-lg px-4 py-2 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all placeholder:text-tertiary-fixed-dim pr-12" placeholder="0.00" type="number"/>
+<span class="absolute right-4 top-2 text-tertiary font-label-md">AZN</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3 & 4. Attributes & Additional Options Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Attributes -->
+<div class="bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,26,26,0.04)] border border-outline-variant/30 h-full">
+<h3 class="font-title-lg text-title-lg text-charcoal-text border-b border-outline-variant pb-3 mb-5">Kateqoriya Atributları</h3>
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Üzük ölçüsü</label>
+<div class="flex flex-wrap gap-2">
+<!-- Example sizes -->
+<button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center font-label-md text-tertiary hover:border-antique-gold hover:text-antique-gold transition-colors" type="button">15</button>
+<button class="w-10 h-10 rounded border border-antique-gold bg-surface-container-high text-antique-gold font-semibold flex items-center justify-center font-label-md transition-colors" type="button">16</button>
+<button class="w-10 h-10 rounded border border-antique-gold bg-surface-container-high text-antique-gold font-semibold flex items-center justify-center font-label-md transition-colors" type="button">16.5</button>
+<button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center font-label-md text-tertiary hover:border-antique-gold hover:text-antique-gold transition-colors" type="button">17</button>
+<button class="w-10 h-10 border-dashed border-2 border-outline-variant rounded flex items-center justify-center text-tertiary hover:text-charcoal-text transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<p class="font-label-sm text-label-sm text-tertiary mt-1">Mövcud olan bütün ölçüləri seçin.</p>
+</div>
+</div>
+</div>
+<!-- Options -->
+<div class="bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,26,26,0.04)] border border-outline-variant/30 h-full">
+<h3 class="font-title-lg text-title-lg text-charcoal-text border-b border-outline-variant pb-3 mb-5">Əlavə Seçimlər</h3>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-label-md text-label-md text-charcoal-text font-semibold">Barter uyğunluğu</p>
+<p class="font-label-sm text-label-sm text-tertiary mt-1">Köhnə qızıl ilə dəyişdirilə bilər</p>
+</div>
+<!-- Custom Toggle ON -->
+<button class="relative inline-flex h-6 w-11 items-center rounded-full bg-antique-gold transition-colors focus:outline-none focus:ring-2 focus:ring-antique-gold focus:ring-offset-2" type="button">
+<span class="inline-block h-4 w-4 translate-x-6 transform rounded-full bg-white transition-transform"></span>
+</button>
+</div>
+<div class="w-full h-px bg-outline-variant/40"></div>
+<div class="flex items-center justify-between">
+<div>
+<p class="font-label-md text-label-md text-charcoal-text font-semibold">Pulsuz çatdırılma</p>
+<p class="font-label-sm text-label-sm text-tertiary mt-1">Bütün ölkə daxili</p>
+</div>
+<!-- Custom Toggle ON -->
+<button class="relative inline-flex h-6 w-11 items-center rounded-full bg-antique-gold transition-colors focus:outline-none focus:ring-2 focus:ring-antique-gold focus:ring-offset-2" type="button">
+<span class="inline-block h-4 w-4 translate-x-6 transform rounded-full bg-white transition-transform"></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Description -->
+<div class="bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,26,26,0.04)] border border-outline-variant/30">
+<h3 class="font-title-lg text-title-lg text-charcoal-text border-b border-outline-variant pb-3 mb-5">Məhsul Təsviri</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Təsvir (AZ)</label>
+<textarea class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all placeholder:text-tertiary-fixed-dim resize-none custom-scrollbar" placeholder="Məhsul haqqında ətraflı məlumat..." rows="4"></textarea>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Təsvir (RU)</label>
+<textarea class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-on-surface focus:ring-1 focus:ring-antique-gold focus:border-antique-gold outline-none transition-all placeholder:text-tertiary-fixed-dim resize-none custom-scrollbar" placeholder="Подробное описание продукта..." rows="4"></textarea>
+</div>
+</div>
+</div>
+<!-- 6. Images -->
+<div class="bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,26,26,0.04)] border border-outline-variant/30">
+<h3 class="font-title-lg text-title-lg text-charcoal-text border-b border-outline-variant pb-3 mb-5 flex items-center justify-between">
+                            Şəkillər
+                            <span class="font-label-sm text-tertiary font-normal">Max: 4 şəkil</span>
+</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Slot 1 (Filled Example) -->
+<div class="border border-outline-variant rounded-lg p-2 bg-surface-container-low flex flex-col group relative">
+<div class="aspect-square w-full rounded-md bg-surface overflow-hidden relative border border-outline-variant/50">
+<img alt="Jewelry preview" class="object-cover w-full h-full" data-alt="A delicate gold pendant featuring a central, perfectly cut diamond, suspended on a fine gold chain. The jewelry is resting softly on a textured, light cream fabric in a clean, minimalist setting. Gentle, natural-looking light washes over the piece, accentuating its elegance and high-end craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEr3rxHCDFNTtOfhjlptJOk-6Lx58F3Pbyb6yva84VRP1DO30lNl4BL9HzY60s6jzEaFvxERXlTTxehwnzdBGw1kuRfLu-srxt3idv_wdmYrD4glXY63v6cVN7NWnERBPTzbvz-opiI-Nn4XEZRRmsQO1zRP94wNQq2t2_XjbLCpCGyuVQPibpzvzAJ0GZusVBt7N-d83zFWxPaPuEe8sE-lZxqxDV_kF7kkZzhy67rmBDPwMvTAuNORfzvdEZ1CHO2nT7wEByv2NE"/>
+<button class="absolute top-2 right-2 bg-white/80 p-1.5 rounded-full text-error hover:bg-error hover:text-white transition-colors opacity-0 group-hover:opacity-100 backdrop-blur-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] block">delete</span>
+</button>
+</div>
+<div class="mt-3 space-y-2 px-1">
+<input class="w-full bg-white border-b border-outline-variant/50 px-2 py-1 text-[13px] text-on-surface focus:border-antique-gold outline-none placeholder:text-tertiary-fixed-dim" placeholder="Alt-mətn (AZ)" type="text"/>
+<input class="w-full bg-white border-b border-outline-variant/50 px-2 py-1 text-[13px] text-on-surface focus:border-antique-gold outline-none placeholder:text-tertiary-fixed-dim" placeholder="Alt-текст (RU)" type="text"/>
+</div>
+</div>
+<!-- Slot 2 (Empty Dropzone) -->
+<div class="border-2 border-dashed border-outline-variant hover:border-antique-gold transition-colors rounded-lg bg-surface-container-low flex flex-col items-center justify-center p-6 text-center cursor-pointer group min-h-[250px]">
+<div class="w-12 h-12 rounded-full bg-surface flex items-center justify-center mb-3 group-hover:bg-antique-gold/10 transition-colors">
+<span class="material-symbols-outlined text-tertiary group-hover:text-antique-gold">add_photo_alternate</span>
+</div>
+<p class="font-label-md text-label-md text-primary group-hover:text-antique-gold">Şəkil əlavə et</p>
+<p class="font-label-sm text-[11px] text-tertiary mt-1">Sürüşdürün və ya klikləyin</p>
+</div>
+<!-- Slot 3 (Empty Dropzone) -->
+<div class="border-2 border-dashed border-outline-variant hover:border-antique-gold transition-colors rounded-lg bg-surface-container-low flex flex-col items-center justify-center p-6 text-center cursor-pointer group min-h-[250px]">
+<div class="w-12 h-12 rounded-full bg-surface flex items-center justify-center mb-3 group-hover:bg-antique-gold/10 transition-colors">
+<span class="material-symbols-outlined text-tertiary group-hover:text-antique-gold">add_photo_alternate</span>
+</div>
+<p class="font-label-md text-label-md text-primary group-hover:text-antique-gold">Şəkil əlavə et</p>
+</div>
+<!-- Slot 4 (Empty Dropzone) -->
+<div class="border-2 border-dashed border-outline-variant hover:border-antique-gold transition-colors rounded-lg bg-surface-container-low flex flex-col items-center justify-center p-6 text-center cursor-pointer group min-h-[250px]">
+<div class="w-12 h-12 rounded-full bg-surface flex items-center justify-center mb-3 group-hover:bg-antique-gold/10 transition-colors">
+<span class="material-symbols-outlined text-tertiary group-hover:text-antique-gold">add_photo_alternate</span>
+</div>
+<p class="font-label-md text-label-md text-primary group-hover:text-antique-gold">Şəkil əlavə et</p>
+</div>
+</div>
+</div>
+</form>
+</div>
+</main>
+<!-- 7. Bottom Actions (Sticky) -->
+<div class="fixed bottom-0 right-0 left-0 md:left-64 bg-white border-t border-outline-variant p-4 z-40 shadow-[0px_-4px_20px_rgba(26,26,26,0.03)] flex justify-end gap-4 px-4 md:px-8">
+<button class="px-6 py-2.5 rounded border border-outline-variant text-primary font-label-md hover:bg-surface-container-low transition-colors bg-transparent" type="button">
+                Ləğv et
+            </button>
+<button class="px-8 py-2.5 rounded bg-antique-gold text-charcoal-text font-label-md font-semibold hover:bg-gold-light transition-colors shadow-sm" type="submit">
+                Yadda saxla
+            </button>
+</div>
+</div>
+</body></html>

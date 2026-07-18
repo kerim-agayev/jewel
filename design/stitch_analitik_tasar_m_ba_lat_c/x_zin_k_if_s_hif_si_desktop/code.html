@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="az"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Xəzinə Kəşfi - Anar Jewellery</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fcf9f3",
+                        "surface-variant": "#e5e2dc",
+                        "gold-dark": "#9E7B3B",
+                        "tertiary": "#5f5e5e",
+                        "on-error": "#ffffff",
+                        "charcoal-text": "#1A1A1A",
+                        "inverse-primary": "#c9c6c1",
+                        "tertiary-fixed": "#e5e2e1",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-tertiary-container": "#727070",
+                        "on-surface-variant": "#474741",
+                        "surface-tint": "#5f5e5a",
+                        "on-surface": "#1c1c18",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "secondary-container": "#fed488",
+                        "primary": "#5f5e5a",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#ebe8e2",
+                        "primary-fixed-dim": "#c9c6c1",
+                        "antique-gold": "#C5A059",
+                        "secondary-fixed": "#ffdea5",
+                        "on-primary-fixed": "#1c1c18",
+                        "inverse-on-surface": "#f3f0ea",
+                        "surface-container": "#f0eee8",
+                        "surface": "#fcf9f3",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "ivory-base": "#F9F6F0",
+                        "gold-light": "#E3D2B0",
+                        "surface-muted": "#F2EFE9",
+                        "on-secondary-fixed": "#261900",
+                        "on-background": "#1c1c18",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#f9f6f5",
+                        "on-primary-fixed-variant": "#474743",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dcdad4",
+                        "primary-fixed": "#e5e2dc",
+                        "inverse-surface": "#31312d",
+                        "outline-variant": "#c8c7be",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-container-low": "#f6f3ed",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "secondary": "#775a19",
+                        "surface-container-highest": "#e5e2dc",
+                        "primary-container": "#f9f6f0",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#787770",
+                        "on-secondary-container": "#785a1a",
+                        "background": "#1A1A1A", /* Overridden for dark theme */
+                        "on-primary-container": "#72706c"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "stack-lg": "24px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "8px",
+                        "section-gap": "80px",
+                        "container-max": "1280px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    fontSize: {
+                        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "display-lg-mobile": ["32px", { lineHeight: "40px", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "title-lg": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }],
+                        "headline-md": ["32px", { lineHeight: "40px", fontWeight: "600" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Hexagon Grid Styles */
+        .hex-grid {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100vw;
+            justify-content: center;
+            align-content: center;
+            margin-top: 2rem;
+            margin-bottom: 6rem;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hex {
+            width: 120px;
+            height: 138px; /* width * 1.1547 */
+            position: relative;
+            margin: 0 -15px -34.64px -15px; /* Adjust spacing to overlap */
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background-color: #2a2a2a;
+            transition: transform 0.3s ease, z-index 0s 0.3s;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .hex:hover {
+            transform: scale(1.15);
+            z-index: 10;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), z-index 0s;
+            box-shadow: 0 0 30px rgba(197, 160, 89, 0.4); /* Gold glow */
+        }
+        
+        .hex-content {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            transition: opacity 0.3s ease, filter 0.3s ease;
+            filter: grayscale(40%) sepia(20%) hue-rotate(-10deg) brightness(0.9); /* Vintage/Mysterious tone */
+        }
+
+        .hex:hover .hex-content {
+            opacity: 1;
+            filter: none;
+        }
+        
+        /* Subtle gold overlay for that warm glint */
+        .hex::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(197, 160, 89, 0.2) 0%, rgba(0,0,0,0) 50%, rgba(26,26,26,0.6) 100%);
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .hex:hover::after {
+            opacity: 0;
+        }
+
+        /* Stagger rows */
+        .hex-grid::before {
+            content: "";
+            width: 60px;
+            float: left;
+            height: 100%;
+            shape-outside: repeating-linear-gradient(#0000 0 103.92px, #000 0 207.84px);
+        }
+        
+        /* Create an ambient glow behind the mosaic */
+        .ambient-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vh;
+            background: radial-gradient(circle, rgba(197,160,89,0.05) 0%, rgba(26,26,26,0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-charcoal-text text-surface-bright min-h-screen font-body-md overflow-x-hidden">
+<!-- Top Navigation Shell (Modified for Dark Theme) -->
+<header class="w-full h-20 px-margin-desktop max-w-container-max mx-auto flex justify-between items-center sticky top-0 z-50 bg-charcoal-text/80 backdrop-blur-md border-b border-white/5">
+<a class="font-headline-md text-headline-md font-bold text-surface-bright hover:opacity-80 transition-opacity" href="#">Anar Jewellery</a>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-md text-label-md text-outline-variant hover:text-antique-gold transition-colors duration-300" href="#">Ana səhifə</a>
+<a class="font-label-md text-label-md text-antique-gold border-b-2 border-antique-gold pb-1 hover:text-gold-dark transition-colors duration-300" href="#">Kəşf et</a>
+<a class="font-label-md text-label-md text-outline-variant hover:text-antique-gold transition-colors duration-300" href="#">Üzüklər</a>
+<a class="font-label-md text-label-md text-outline-variant hover:text-antique-gold transition-colors duration-300" href="#">Boyunbağılar</a>
+</nav>
+<div class="flex gap-4">
+<button class="text-surface-bright hover:text-antique-gold transition-colors"><span class="material-symbols-outlined">search</span></button>
+<button class="text-surface-bright hover:text-antique-gold transition-colors"><span class="material-symbols-outlined">shopping_bag</span></button>
+</div>
+</header>
+<!-- Page Header & Filters -->
+<section class="w-full px-margin-desktop max-w-container-max mx-auto py-stack-lg text-center relative z-20">
+<p class="font-label-md text-label-md text-antique-gold tracking-widest uppercase mb-2 opacity-80">Kolleksiyanı kəşf et</p>
+<h1 class="font-display-lg text-display-lg text-surface-bright mb-8 font-light">Xəzinə</h1>
+<!-- Filter Chip Bar -->
+<div class="flex justify-center gap-3 flex-wrap">
+<button class="px-6 py-2 rounded-full border border-antique-gold bg-antique-gold text-charcoal-text font-label-md text-label-md transition-all">Hamısı</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant/30 text-outline-variant hover:border-antique-gold hover:text-antique-gold font-label-md text-label-md transition-all backdrop-blur-sm">Üzüklər</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant/30 text-outline-variant hover:border-antique-gold hover:text-antique-gold font-label-md text-label-md transition-all backdrop-blur-sm">Boyunbağılar</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant/30 text-outline-variant hover:border-antique-gold hover:text-antique-gold font-label-md text-label-md transition-all backdrop-blur-sm">Sırğalar</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant/30 text-outline-variant hover:border-antique-gold hover:text-antique-gold font-label-md text-label-md transition-all backdrop-blur-sm">Qolbaqlar</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant/30 text-outline-variant hover:border-antique-gold hover:text-antique-gold font-label-md text-label-md transition-all backdrop-blur-sm">Saatlar</button>
+</div>
+</section>
+<!-- Experimental Hexagon Mosaic -->
+<main class="relative w-full overflow-hidden min-h-[819px]">
+<div class="ambient-glow"></div>
+<div class="hex-grid" id="mosaic-container">
+<!-- Hexagons will be injected by JS -->
+</div>
+</main>
+<!-- Bottom Navigation Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-charcoal-text/90 backdrop-blur-md border-t border-white/5 rounded-t-xl shadow-lg">
+<a class="flex flex-col items-center justify-center text-outline-variant active:bg-surface-container-low transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-sm text-label-sm">Ana səhifə</span>
+</a>
+<a class="flex flex-col items-center justify-center text-antique-gold font-bold active:bg-surface-container-low scale-95 transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">explore</span>
+<span class="font-label-sm text-label-sm">Kəşf</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline-variant active:bg-surface-container-low transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">shopping_cart</span>
+<span class="font-label-sm text-label-sm">Səbət</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline-variant active:bg-surface-container-low transition-transform duration-150 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-sm text-label-sm">Profil</span>
+</a>
+</nav>
+<script>
+        // Generate Hexagon Mosaic dynamically
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('mosaic-container');
+            const numberOfCells = 50; // Dense packing
+
+            for (let i = 0; i < numberOfCells; i++) {
+                const hex = document.createElement('div');
+                hex.className = 'hex';
+                
+                const content = document.createElement('div');
+                content.className = 'hex-content';
+                
+                // Add varied images with specific dark, warm luxury aesthetic prompts
+                content.style.backgroundImage = "url('placeholder')";
+                content.setAttribute('data-alt', `A moody, dark, macro photography shot of an exquisite gold and diamond jewelry piece resting on dark velvet. The lighting is low-key, featuring strong, warm golden glints that emphasize the intricate craftsmanship and luxury. The aesthetic is extremely high-end, mysterious, and cinematic, focusing closely on the texture of the precious metals and stones against a deep charcoal background. Image ${i}`);
+                
+                hex.appendChild(content);
+                container.appendChild(hex);
+            }
+        });
+    </script>
+</body></html>

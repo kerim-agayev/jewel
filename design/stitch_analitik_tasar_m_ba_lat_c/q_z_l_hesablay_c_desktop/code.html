@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="az"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Qızıl Qiyməti Hesablayıcısı | Anar Jewellery</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for a refined look */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #c8c7be; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #C5A059; }
+    </style>
+<!-- Tailwind Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#fcf9f3",
+                    "primary-fixed-dim": "#c9c6c1",
+                    "surface-muted": "#F2EFE9",
+                    "antique-gold": "#C5A059",
+                    "on-primary-fixed-variant": "#474743",
+                    "secondary-fixed-dim": "#e9c176",
+                    "inverse-primary": "#c9c6c1",
+                    "surface-container-highest": "#e5e2dc",
+                    "surface-container-low": "#f6f3ed",
+                    "on-surface": "#1c1c18",
+                    "surface-tint": "#5f5e5a",
+                    "on-primary-container": "#72706c",
+                    "secondary-fixed": "#ffdea5",
+                    "charcoal-text": "#1A1A1A",
+                    "surface": "#fcf9f3",
+                    "secondary-container": "#fed488",
+                    "gold-light": "#E3D2B0",
+                    "surface-variant": "#e5e2dc",
+                    "surface-container-high": "#ebe8e2",
+                    "inverse-surface": "#31312d",
+                    "gold-dark": "#9E7B3B",
+                    "ivory-base": "#F9F6F0",
+                    "outline-variant": "#c8c7be",
+                    "tertiary": "#5f5e5e",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "on-secondary-fixed": "#261900",
+                    "surface-container": "#f0eee8",
+                    "primary-fixed": "#e5e2dc",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#727070",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#785a1a",
+                    "on-surface-variant": "#474741",
+                    "on-primary-fixed": "#1c1c18",
+                    "secondary": "#775a19",
+                    "primary": "#5f5e5a",
+                    "tertiary-container": "#f9f6f5",
+                    "surface-dim": "#dcdad4",
+                    "outline": "#787770",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#f9f6f0",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "background": "#fcf9f3",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "inverse-on-surface": "#f3f0ea",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1c1c18",
+                    "tertiary-fixed": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "margin-desktop": "64px",
+                    "stack-sm": "8px",
+                    "stack-lg": "24px",
+                    "margin-mobile": "20px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-ivory-base text-on-surface font-body-md min-h-screen flex flex-col relative pb-[80px] md:pb-0">
+<!-- Gold Price Ticker (Style Guidance) -->
+<div class="bg-charcoal-text text-white font-label-sm text-label-sm w-full py-2 px-margin-mobile md:px-margin-desktop z-[60] relative overflow-hidden flex justify-center items-center gap-6 tracking-wide">
+<div class="flex items-center gap-2">
+<span class="text-outline-variant">999 Əyar:</span>
+<span class="text-gold-light">134.50 AZN</span>
+<span class="material-symbols-outlined text-[14px] text-green-400" data-weight="fill" style="font-variation-settings: 'FILL' 1;">arrow_drop_up</span>
+</div>
+<div class="flex items-center gap-2 hidden md:flex">
+<span class="text-outline-variant">750 Əyar:</span>
+<span class="text-gold-light">100.87 AZN</span>
+<span class="material-symbols-outlined text-[14px] text-green-400" data-weight="fill" style="font-variation-settings: 'FILL' 1;">arrow_drop_up</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-outline-variant">585 Əyar:</span>
+<span class="text-gold-light">78.68 AZN</span>
+<span class="material-symbols-outlined text-[14px] text-green-400" data-weight="fill" style="font-variation-settings: 'FILL' 1;">arrow_drop_up</span>
+</div>
+</div>
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface shadow-[0px_4px_20px_rgba(26,26,26,0.04)] docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20 hidden md:flex">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-surface-bright tracking-tight" href="#">
+                Anar Jewellery
+            </a>
+<!-- Navigation Links -->
+<nav class="flex gap-stack-lg">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300 active:opacity-80 transition-opacity" href="#">Ana səhifə</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300 active:opacity-80 transition-opacity" href="#">Üzüklər</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300 active:opacity-80 transition-opacity" href="#">Boyunbağılar</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300 active:opacity-80 transition-opacity" href="#">Sırğalar</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300 active:opacity-80 transition-opacity" href="#">Qolbaqlar</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300 active:opacity-80 transition-opacity" href="#">Dəstlər</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-gold-dark transition-colors duration-300 active:opacity-80 transition-opacity" href="#">Qızıl külçə</a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4 text-antique-gold">
+<button class="hover:text-gold-dark transition-colors duration-300 active:opacity-80 transition-opacity p-2">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:text-gold-dark transition-colors duration-300 active:opacity-80 transition-opacity p-2">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+<!-- Mobile Top Nav Bar (Simplified for responsive pivot) -->
+<div class="flex justify-between items-center w-full px-margin-mobile h-16 md:hidden">
+<a class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight" href="#">
+                Anar Jewellery
+            </a>
+<button class="text-antique-gold p-2">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content (Centered 600px layout per guidance) -->
+<main class="flex-grow w-full max-w-[600px] mx-auto px-margin-mobile md:px-0 py-section-gap flex flex-col gap-10">
+<!-- Header Section -->
+<div class="text-center relative">
+<!-- Decorative atmospheric background layer -->
+<div class="absolute inset-0 -z-10 opacity-20 blur-2xl rounded-full scale-150 pointer-events-none" data-alt="A soft, ethereal, and out-of-focus macro shot of a highly polished gold surface reflecting warm light, creating a luxurious and minimal background texture. The tones are muted creamy ivory and subtle antique gold, conveying an atmosphere of quiet luxury and high-end craftsmanship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlSBTGwZtE9hE6SB0amuu9eWN867WNcHjcMnl2c4mlatZkoryvct-AjMc1Jc2aFiO-pqVmRmBxhrWOsr53MrWv8OxD3j85CGuFsAecF9T7lBXutqjgJ5kvt5ko4iSgCTVnBJBR_nad3wLqm8w4MFT3RM2w2j871Y8whGqd_4odDlfTWIZXApx_g9M5qGhhdWPjTFDaaDY-0e61XwRtq3S-HnspoGKL8BYaTwUGahv9yiyZRSJjcEX3ZeedMWMbDjToID7QKuWIxjW2')"></div>
+<h1 class="font-headline-md text-headline-md md:font-display-lg md:text-display-lg font-bold text-on-surface mb-3">Qızıl Qiyməti Hesablayıcısı</h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">info</span>
+                Qiymətlər dünya birjasına əsasən mütəmadi yenilənir
+            </p>
+</div>
+<!-- Trend Chart Card (Minimalist) -->
+<div class="bg-surface rounded-xl shadow-[0px_4px_20px_rgba(26,26,26,0.04)] p-6 border border-white relative overflow-hidden group">
+<div class="flex justify-between items-end mb-4 relative z-10">
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant mb-1">30 Günlük Qrafik (999 Əyar)</h3>
+<div class="font-title-lg text-title-lg text-on-surface">1 ONS = 2,345.60 USD</div>
+</div>
+<div class="text-green-600 font-label-md text-label-md flex items-center bg-green-50 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+                    +1.2%
+                </div>
+</div>
+<!-- Abstract Sparkline SVG -->
+<div class="h-20 w-full relative z-10 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+<svg class="w-full h-full stroke-antique-gold fill-none" preserveaspectratio="none" stroke-width="1.5" viewbox="0 0 100 30">
+<path d="M0,25 Q10,22 20,20 T40,15 T60,10 T80,12 T100,5"></path>
+<!-- Subdued area fill -->
+<path class="fill-gold-light/20 stroke-none" d="M0,25 Q10,22 20,20 T40,15 T60,10 T80,12 T100,5 L100,30 L0,30 Z"></path>
+</svg>
+</div>
+</div>
+<!-- Calculator Card -->
+<div class="bg-surface rounded-xl shadow-[0px_4px_20px_rgba(26,26,26,0.04)] p-8 border border-white">
+<form class="flex flex-col gap-stack-lg">
+<!-- Inputs Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Purity Dropdown -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="purity">Qızılın Əyarı</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-muted border border-outline-variant/50 rounded-lg px-4 py-3 font-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-antique-gold focus:border-antique-gold transition-all cursor-pointer" id="purity">
+<option value="999">999 Əyar (24K)</option>
+<option value="916">916 Əyar (22K)</option>
+<option selected="" value="750">750 Əyar (18K)</option>
+<option value="585">585 Əyar (14K)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Weight Input -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="weight">Çəki (qramla)</label>
+<div class="relative">
+<input class="w-full bg-surface-muted border border-outline-variant/50 rounded-lg px-4 py-3 font-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-antique-gold focus:border-antique-gold transition-all text-right pr-12" id="weight" min="0.1" step="0.1" type="number" value="10.5"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant">qr</span>
+</div>
+</div>
+</div>
+<hr class="border-t border-outline-variant/30 my-2"/>
+<!-- Result Area -->
+<div class="flex flex-col items-center justify-center py-6 bg-ivory-base/50 rounded-lg border border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-widest">Təxmini Dəyər</span>
+<div class="font-headline-md text-headline-md font-bold text-antique-gold">
+                        1,059.13 AZN
+                    </div>
+</div>
+<!-- CTA Button -->
+<button class="w-full bg-antique-gold hover:bg-gold-dark text-white font-label-md text-label-md py-4 rounded-lg transition-colors duration-300 shadow-sm flex items-center justify-center gap-2" type="button">
+                    Sifariş üçün əlaqə
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant w-full py-section-gap px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-stack-lg pb-24 md:pb-section-gap">
+<div class="flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm text-on-surface dark:text-surface-bright font-bold">Anar Jewellery</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant">© 2024 Anar Jewellery. Bütün hüquqlar qorunur.</p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">Haqqımızda</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">WhatsApp ilə əlaqə</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">Tez-tez verilən suallar</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">Çatdırılma şərtləri</a>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white dark:bg-inverse-surface border-t border-outline-variant shadow-lg rounded-t-xl pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-low focus:outline-none w-16 h-12 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm text-[10px]">Ana səhifə</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-low focus:outline-none w-16 h-12 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="grid_view">grid_view</span>
+<span class="font-label-sm text-label-sm text-[10px]">Kateqoriyalar</span>
+</a>
+<!-- Active Item: Hesabla -->
+<a class="flex flex-col items-center justify-center text-antique-gold font-bold scale-95 transition-transform duration-150 active:bg-surface-container-low focus:outline-none w-16 h-12 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="calculate" data-weight="fill" style="font-variation-settings: 'FILL' 1;">calculate</span>
+<span class="font-label-sm text-label-sm text-[10px]">Hesabla</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-low focus:outline-none w-16 h-12 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="chat">chat</span>
+<span class="font-label-sm text-label-sm text-[10px]">Əlaqə</span>
+</a>
+</nav>
+</body></html>

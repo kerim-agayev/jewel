@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="az"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Satış Təmsilçisi Performansı - Qızıl Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#ebe8e2",
+                        "secondary": "#775a19",
+                        "surface-container-highest": "#e5e2dc",
+                        "primary-fixed": "#e5e2dc",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#261900",
+                        "primary-fixed-dim": "#c9c6c1",
+                        "surface-bright": "#fcf9f3",
+                        "gold-light": "#E3D2B0",
+                        "inverse-primary": "#c9c6c1",
+                        "surface-tint": "#5f5e5a",
+                        "secondary-fixed-dim": "#e9c176",
+                        "background": "#fcf9f3",
+                        "surface-container": "#f0eee8",
+                        "antique-gold": "#C5A059",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-primary": "#ffffff",
+                        "charcoal-text": "#1A1A1A",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ea",
+                        "inverse-surface": "#31312d",
+                        "on-surface": "#1c1c18",
+                        "on-primary-fixed": "#1c1c18",
+                        "primary": "#5f5e5a",
+                        "tertiary-container": "#f9f6f5",
+                        "gold-dark": "#9E7B3B",
+                        "on-surface-variant": "#474741",
+                        "surface-muted": "#F2EFE9",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e5e2dc",
+                        "on-secondary-container": "#785a1a",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "ivory-base": "#F9F6F0",
+                        "on-error": "#ffffff",
+                        "outline": "#787770",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c8c7be",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed": "#ffdea5",
+                        "tertiary": "#5f5e5e",
+                        "surface-dim": "#dcdad4",
+                        "surface-container-low": "#f6f3ed",
+                        "on-primary-fixed-variant": "#474743",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary-container": "#72706c",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#727070",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#f9f6f0",
+                        "secondary-container": "#fed488",
+                        "surface": "#fcf9f3",
+                        "on-background": "#1c1c18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "section-gap": "80px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="h-screen w-64 fixed left-0 top-0 bg-ivory-base dark:bg-surface-dim border-r border-outline-variant dark:border-outline flex flex-col py-6 z-50">
+<!-- Brand / Header -->
+<div class="px-6 mb-8 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-antique-gold mb-4">
+<img alt="Admin Avatarı" class="w-full h-full object-cover" data-alt="A highly detailed close-up portrait of a professional jewelry boutique manager in a softly lit, luxurious showroom. The manager exudes confidence and warmth. The lighting highlights subtle golden tones in the background, reinforcing a 'Quiet Luxury' aesthetic. The image is crisp, realistic, and styled for a high-end corporate avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAksLVeSRJ3-ak9hfgVnX3AlnhDapcJx62ZVarnm3U9PO2dO4TGGLhsdHjsYyL6i6UUIkT5wVxJwtngyqWO9Gou1BMMiV8oOgfEfOBD2ARGzfu1gzJLze8OrZXDQWAiIIRpJYKIYGE_UmbkmcriiOSm398RDinr3-l3rcYMpXBX-N0sEAE92PwmPCoaOXeLldJyYAhKxMAWqXUX-d_4EO9k0Q-bdJo1R2eZ8ngaLxkJh4Ry7PYXHnZikgGAohflU8R2M7m9xevpS2YK"/>
+</div>
+<h1 class="font-headline-sm text-headline-sm font-semibold text-charcoal-text dark:text-on-surface text-center">Qızıl Admin</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 text-center">Baş Menecer</p>
+</div>
+<!-- CTA -->
+<div class="px-4 mb-6">
+<button class="w-full bg-antique-gold text-charcoal-text font-label-md text-label-md py-3 rounded-lg hover:bg-gold-light transition-colors duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                Yeni Məhsul
+            </button>
+</div>
+<!-- Navigation Links -->
+<ul class="flex-1 flex flex-col gap-1 px-2 overflow-y-auto">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Panel</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">diamond</span>
+<span class="font-label-md text-label-md">Məhsullar</span>
+</a>
+</li>
+<li>
+<!-- ACTIVE STATE: Satışlar (Closest semantic match to Sales Rep Performance) -->
+<a class="flex items-center gap-3 px-4 py-3 text-secondary font-bold border-r-4 border-antique-gold bg-surface-container-high dark:bg-surface-container-highest rounded-l-lg opacity-80 scale-[0.99] transition-transform" href="#">
+<span class="material-symbols-outlined filled">shopping_cart</span>
+<span class="font-label-md text-label-md">Satışlar</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-md text-label-md">Müştərilər</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-md text-label-md">Hesabatlar</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Parametrlər</span>
+</a>
+</li>
+</ul>
+<!-- Footer Actions -->
+<div class="px-4 mt-auto pt-4 border-t border-outline-variant">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Çıxış</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="ml-64 flex-1 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline">
+<!-- Left: Search (from JSON config) -->
+<div class="flex items-center gap-4 flex-1">
+<h2 class="font-title-lg text-title-lg font-bold text-charcoal-text dark:text-on-surface mr-6">İdarəetmə Paneli</h2>
+<div class="relative max-w-md w-full hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-muted border border-outline-variant rounded-full font-body-md text-body-md text-on-surface focus:outline-none focus:border-antique-gold focus:ring-1 focus:ring-antique-gold transition-colors placeholder:text-on-surface-variant" placeholder="Axtarış..." type="text"/>
+</div>
+</div>
+<!-- Right: Actions & Profile -->
+<div class="flex items-center gap-2">
+<button aria-label="Notifications" class="p-2 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button aria-label="Help" class="p-2 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-container rounded-full transition-colors mr-4">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-antique-gold cursor-pointer hover:scale-95 transition-all">
+<img alt="Profil" class="w-full h-full object-cover" data-alt="A sophisticated, small circular avatar showing a subtle, elegant monogram or a highly professional, abstract minimalist portrait indicative of high-end luxury brand management. Soft creamy lighting with delicate gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrt8Evtp7URURgKY3TyHX91n5tQyuoV2lRgGt4nyZzKOBqWuxXq7fLRP90DcVligHDC-OO5-tU-3RAEpYorXXVMtVlQAMbPQFpNu7w8zEIO1NkyqAuxB2e6upZLOwWiesuehw9SN-d1x6tWxN4M6Tu-FKsfGjGWJu7oVMIZbi80iCVD72Vmnq86myIfQO7RCKd_xssWuxdSAmGKoakCp1AOQxsHC35AiLjjtJXOu2bW5DqqXnlkcY_1Oyh-msko_9Db27KDOTrFC-M"/>
+</div>
+</div>
+</header>
+<!-- Canvas / Core Content -->
+<main class="flex-1 p-8 bg-background">
+<!-- Page Header & Filters -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-charcoal-text mb-2">Satış Təmsilçisi Performansı</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Əməkdaşların satış göstəriciləri (ciro) və reytinqi.</p>
+</div>
+<!-- Time Toggle -->
+<div class="flex bg-surface-container rounded-lg p-1 border border-outline-variant">
+<button class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-variant transition-colors">Günlük</button>
+<button class="px-4 py-2 rounded-md font-label-md text-label-md bg-white text-secondary shadow-sm font-semibold transition-colors">Həftəlik</button>
+<button class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-variant transition-colors">Aylıq</button>
+</div>
+</div>
+<!-- Bento Layout for Stats & Table -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+<!-- KPI Card 1 -->
+<div class="bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,26,26,0.04)] border border-surface-container flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ümumi Həftəlik Ciro</span>
+<div class="p-2 bg-primary-container text-antique-gold rounded-full">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-charcoal-text">124,500 AZN</h3>
+<p class="font-label-md text-label-md text-[#25D366] flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+                            +12.5% keçən həftəyə nisbətən
+                        </p>
+</div>
+</div>
+<!-- KPI Card 2 -->
+<div class="bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,26,26,0.04)] border border-surface-container flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Lider Təmsilçi</span>
+<div class="p-2 bg-secondary-container text-on-secondary-container rounded-full">
+<span class="material-symbols-outlined text-xl">military_tech</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text">Aygün Məmmədova</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">32,400 AZN satış həcmi</p>
+</div>
+</div>
+<!-- KPI Card 3 -->
+<div class="bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,26,26,0.04)] border border-surface-container flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Orta Satış Məbləği</span>
+<div class="p-2 bg-surface-muted text-on-surface rounded-full">
+<span class="material-symbols-outlined text-xl">point_of_sale</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-charcoal-text">1,245 AZN</h3>
+<p class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm">trending_flat</span>
+                            Sabit göstərici
+                        </p>
+</div>
+</div>
+</div>
+<!-- Leaderboard Table Card -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(26,26,26,0.04)] overflow-hidden">
+<div class="p-6 border-b border-surface-container">
+<h3 class="font-title-lg text-title-lg text-charcoal-text">Reytinq Cədvəli</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-muted border-b border-surface-container">
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Sıra</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Ad</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider text-right">Satılan say</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider text-right">Toplam məbləğ</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider text-right">Orta satış həcmi</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider text-center">Trend</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-charcoal-text">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-4 px-6">
+<div class="w-8 h-8 rounded-full bg-antique-gold text-white flex items-center justify-center font-bold text-sm">1</div>
+</td>
+<td class="py-4 px-6 font-medium flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-outline-variant">
+<img alt="" class="w-full h-full object-cover" data-alt="A professional headshot of a top-performing female sales representative in a luxury jewelry context. Soft lighting, sophisticated minimal background, conveying trust and elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5yrFOYfnZQx52N7vxZLIK9MtUlvsPCy7OWddgRxMwxoLiESEOE2ufPteuZp54NjCoSeyDDUrDE3NRvYctmAeegdnWfgtYPtg2Ea9rUzHh-X6tgkO-N5tlK7Ykqh39vRt9rkxoq0H9LFKfF8dzz7hSD7aT-64lFg3da7eQZC5WMZuBYbIgndFDzTY430sAMkQCc1DozUUihSuHAohAThzE_7eOKjzXtQHV9g_sOD6X7BgrLHe9WAARIA9ImX0w4SVt-WzowcsGD7NM"/>
+</div>
+                                    Aygün Məmmədova
+                                </td>
+<td class="py-4 px-6 text-right">26</td>
+<td class="py-4 px-6 text-right font-semibold text-secondary">32,400 AZN</td>
+<td class="py-4 px-6 text-right text-on-surface-variant">1,246 AZN</td>
+<td class="py-4 px-6">
+<!-- Sparkline placeholder using SVG path for visual -->
+<svg class="w-24 h-8 mx-auto" preserveaspectratio="none" viewbox="0 0 100 30">
+<path d="M0,25 L20,20 L40,28 L60,15 L80,18 L100,5" fill="none" stroke="#25D366" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-4 px-6">
+<div class="w-8 h-8 rounded-full bg-surface-dim text-charcoal-text flex items-center justify-center font-bold text-sm">2</div>
+</td>
+<td class="py-4 px-6 font-medium flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-outline-variant">
+<img alt="" class="w-full h-full object-cover" data-alt="A professional headshot of a male sales associate in a fine jewelry boutique setting. He is dressed sharply, softly lit against a warm ivory background. Quiet luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbLFJkysm1WpVmgSLchSDrwSoqEXg5l73S9mP3vJ2Q7kGdiYWWZ4XHVdi3sy8GYZcfVsglM5A6uemrQYpvZ_u-DwBhtbfjc_712VmF-_R4jjEz2D9rOLFAQQhVw3oU-q1yUEmMg6E7C84FmI-THQEfBn_6Lkq-nr4DGlpdamv9sWcVibvSkv5wzZYrgO2NCzJylY6ausHNR80Ofxjzf9Awal51JTnlFP0IOdB5m_xh1NP7Q1gA8cTx_yT6HHUOHZzqTXfB0C8FuO9n"/>
+</div>
+                                    Rəşad Əliyev
+                                </td>
+<td class="py-4 px-6 text-right">31</td>
+<td class="py-4 px-6 text-right font-semibold text-secondary">28,950 AZN</td>
+<td class="py-4 px-6 text-right text-on-surface-variant">933 AZN</td>
+<td class="py-4 px-6">
+<svg class="w-24 h-8 mx-auto" preserveaspectratio="none" viewbox="0 0 100 30">
+<path d="M0,15 L20,25 L40,10 L60,20 L80,12 L100,8" fill="none" stroke="#25D366" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-4 px-6">
+<div class="w-8 h-8 rounded-full bg-surface-dim text-charcoal-text flex items-center justify-center font-bold text-sm">3</div>
+</td>
+<td class="py-4 px-6 font-medium flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-outline-variant">
+<img alt="" class="w-full h-full object-cover" data-alt="A professional headshot of a female jewelry consultant. Elegant, understated style, warm muted gold background lighting, projecting expertise and high-end service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuUyEVTXZi6id2khMgj24rmgm56LeG2QDfunb6YcRTFhy24JwNwGyYT5SRCjQIAmCax2q2AtCJ3Ylpfmjmzp1iTP9rFIH0jfvQBHu1kayC7Nkm55sK9a2aFED3jyOIyl--NPBr7rrT-fMf3PWBcJQejzmUVz-wNhwQWdBICDKBN0SZv8-Ejoz1RseCIm6E0bp4gczckaVuhE4d-eUewsuIJpzEk6YWNfSc-V5C-Evhlyl8BfFDAWPU9tCiU3BQB9z2-u4zot0MLxJz"/>
+</div>
+                                    Lalə Hüseynova
+                                </td>
+<td class="py-4 px-6 text-right">18</td>
+<td class="py-4 px-6 text-right font-semibold text-secondary">24,100 AZN</td>
+<td class="py-4 px-6 text-right text-on-surface-variant">1,338 AZN</td>
+<td class="py-4 px-6">
+<svg class="w-24 h-8 mx-auto" preserveaspectratio="none" viewbox="0 0 100 30">
+<path d="M0,20 L20,15 L40,22 L60,18 L80,25 L100,20" fill="none" stroke="#C5A059" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-4 px-6 text-on-surface-variant pl-8">4</td>
+<td class="py-4 px-6 font-medium flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-outline-variant flex items-center justify-center text-on-surface-variant font-bold">
+                                         E
+                                    </div>
+                                    Elvin Qasımov
+                                </td>
+<td class="py-4 px-6 text-right">22</td>
+<td class="py-4 px-6 text-right font-semibold text-charcoal-text">19,800 AZN</td>
+<td class="py-4 px-6 text-right text-on-surface-variant">900 AZN</td>
+<td class="py-4 px-6">
+<svg class="w-24 h-8 mx-auto" preserveaspectratio="none" viewbox="0 0 100 30">
+<path d="M0,10 L20,15 L40,12 L60,25 L80,20 L100,28" fill="none" stroke="#ba1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer -->
+<div class="p-4 border-t border-surface-container flex justify-between items-center bg-surface-bright">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cəmi: 12 təmsilçi</span>
+<div class="flex gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-antique-gold text-white font-label-sm">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant font-label-sm">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

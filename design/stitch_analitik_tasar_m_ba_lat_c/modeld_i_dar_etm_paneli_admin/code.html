@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="az"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zərgər Admin - Style Shots</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e5e2dc",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "primary-container": "#f9f6f0",
+                      "on-tertiary": "#ffffff",
+                      "antique-gold": "#C5A059",
+                      "surface-muted": "#F2EFE9",
+                      "on-secondary-container": "#785a1a",
+                      "on-primary": "#ffffff",
+                      "surface": "#fcf9f3",
+                      "surface-dim": "#dcdad4",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "surface-bright": "#fcf9f3",
+                      "surface-container-high": "#ebe8e2",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#261900",
+                      "tertiary": "#5f5e5e",
+                      "surface-container-low": "#f6f3ed",
+                      "secondary": "#775a19",
+                      "primary-fixed-dim": "#c9c6c1",
+                      "background": "#fcf9f3",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#fed488",
+                      "charcoal-text": "#1A1A1A",
+                      "primary": "#5f5e5a",
+                      "on-tertiary-container": "#727070",
+                      "secondary-fixed": "#ffdea5",
+                      "on-background": "#1c1c18",
+                      "outline": "#787770",
+                      "primary-fixed": "#e5e2dc",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#e9c176",
+                      "inverse-on-surface": "#f3f0ea",
+                      "ivory-base": "#F9F6F0",
+                      "on-primary-fixed-variant": "#474743",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#c9c6c1",
+                      "on-primary-fixed": "#1c1c18",
+                      "gold-dark": "#9E7B3B",
+                      "surface-tint": "#5f5e5a",
+                      "on-surface": "#1c1c18",
+                      "gold-light": "#E3D2B0",
+                      "error": "#ba1a1a",
+                      "on-surface-variant": "#474741",
+                      "surface-container-highest": "#e5e2dc",
+                      "tertiary-container": "#f9f6f5",
+                      "on-primary-container": "#72706c",
+                      "outline-variant": "#c8c7be",
+                      "tertiary-fixed": "#e5e2e1",
+                      "inverse-surface": "#31312d",
+                      "surface-container": "#f0eee8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "24px",
+                      "gutter": "24px",
+                      "stack-md": "16px",
+                      "section-gap": "80px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "stack-sm": "8px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 20px rgba(26, 26, 26, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md font-body-md min-h-screen">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full flex flex-col h-screen w-64 border-r border-outline-variant bg-surface border-r border-outline-variant z-50">
+<div class="p-6">
+<h1 class="font-headline-sm text-headline-sm text-on-surface">Zərgər Admin</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Premium Jewelry</p>
+</div>
+<div class="px-4 mb-6">
+<button class="w-full bg-antique-gold text-charcoal-text font-label-md text-label-md py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gold-dark transition-colors">
+<span class="material-symbols-outlined">add</span>
+                New Product
+            </button>
+</div>
+<ul class="flex-1 px-2 space-y-1 overflow-y-auto">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-lg transition-all duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-lg transition-all duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">diamond</span>
+                    Products
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-lg transition-all duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+                    Sales
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-lg transition-all duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">group</span>
+                    Customers
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-lg transition-all duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">insights</span>
+                    Analytics
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-bold rounded-lg transition-all duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    Style Shots
+                </a>
+</li>
+</ul>
+<div class="p-2 border-t border-outline-variant mt-auto">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-lg transition-all duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-lg transition-all duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </a>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 left-64 h-16 flex justify-between items-center px-gutter z-40 bg-surface border-b border-outline-variant z-40">
+<div class="flex items-center flex-1">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-on-surface font-body-md text-body-md focus:ring-1 focus:ring-antique-gold outline-none" placeholder="Axtar..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary scale-95 transition-transform p-2 rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary scale-95 transition-transform p-2 rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-surface-variant overflow-hidden border border-outline-variant ml-2">
+<img alt="Administrator Profile" class="w-full h-full object-cover" data-alt="A close up, professional headshot of a corporate administrator in a bright, modern office setting. The lighting is soft and flattering, creating a high-key light mode aesthetic. The individual wears professional attire in neutral tones, projecting competence and trustworthiness. The background is softly blurred." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXxBuddiIMtWums_jggTEzJiwd2P8ZLDwRCef1IOI0FH9T1o-sb7nwdKRl73qnTaBR4nv84OkhCRsKQvgI5sgPRg1ZCr8qSlxAWfYxCQXamTKTaznNGFDdORhaU4QEsPT3utWaLEPLkXwVEVs_6Sxgm4vqGISynU8yqtAh8gs6ROY3LD4zybgkt20hKLXV-FbVSO98ek3DB8EhnP5xhwQh7iP73_r0wBFur-OxAWra4eOD9knh96Il0fZXRCU7nt3bADJihe991CxV"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 pt-16 p-8">
+<!-- Page Header -->
+<div class="mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface">'Modeldə' Kontent İdarəetməsi</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Lookbook üçün yeni AI şəkillərini yükləyin və məhsulları əlaqələndirin.</p>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter">
+<!-- Left Column: Upload & Form -->
+<div class="xl:col-span-7 space-y-stack-lg">
+<!-- Upload Section -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant border-dashed flex flex-col items-center justify-center text-center hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-secondary-container" style="font-size: 32px;">cloud_upload</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Yeni Şəkil Yüklə</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 mb-6 max-w-md">Yüksək keyfiyyətli AI tərəfindən yaradılmış model şəkillərini buraya sürükləyin və ya kompüterinizdən seçin.</p>
+<button class="bg-transparent border border-antique-gold text-antique-gold font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-surface-container-high transition-colors">
+                        Şəkil Seçin
+                    </button>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-4">Tövsiyə olunan ölçü: 1080x1350px (JPG, PNG)</p>
+</div>
+<!-- Product Linking Form -->
+<div class="bg-surface-container-lowest rounded-xl p-6 soft-shadow border border-surface-variant">
+<h3 class="font-title-lg text-title-lg text-on-surface border-b border-outline-variant pb-4 mb-6">Şəkil Məlumatları &amp; Əlaqəli Məhsullar</h3>
+<form class="space-y-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Başlıq</label>
+<input class="w-full px-4 py-3 bg-surface-muted border border-outline-variant rounded-lg font-body-md text-body-md focus:outline-none focus:border-antique-gold text-on-surface" placeholder="Məsələn: Payız Kolleksiyası Zərifliyi" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Kateqoriya</label>
+<div class="relative">
+<select class="w-full px-4 py-3 bg-surface-muted border border-outline-variant rounded-lg font-body-md text-body-md appearance-none focus:outline-none focus:border-antique-gold text-on-surface">
+<option>Gündəlik Zəriflik</option>
+<option>Toy və Nişan</option>
+<option>Xüsusi Günlər</option>
+<option>Kişi Aksesuarları</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Məhsulları Əlaqələndir (Çoxlu Seçim)</label>
+<div class="relative mb-2">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-muted border border-outline-variant rounded-lg font-body-md text-body-md focus:outline-none focus:border-antique-gold text-on-surface" placeholder="SKU və ya məhsul adı ilə axtarış..." type="text"/>
+</div>
+<!-- Selected Products Chips -->
+<div class="flex flex-wrap gap-2 mt-3">
+<div class="flex items-center bg-surface-container-high rounded-full px-3 py-1 border border-outline-variant">
+<span class="font-label-sm text-label-sm text-on-surface mr-2">Qızıl Boyunbağı (SKU: ZG-102)</span>
+<button class="text-on-surface-variant hover:text-error" type="button">
+<span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+</button>
+</div>
+<div class="flex items-center bg-surface-container-high rounded-full px-3 py-1 border border-outline-variant">
+<span class="font-label-sm text-label-sm text-on-surface mr-2">Brilyant Sırğa (SKU: ZG-445)</span>
+<button class="text-on-surface-variant hover:text-error" type="button">
+<span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- Right Column: Preview -->
+<div class="xl:col-span-5">
+<div class="bg-surface-container-lowest rounded-xl p-6 soft-shadow border border-surface-variant sticky top-24">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-title-lg text-title-lg text-on-surface">Ön İzləmə</h3>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded font-label-sm text-label-sm">Aktiv Tənzimləmə</span>
+</div>
+<div class="relative rounded-lg overflow-hidden bg-surface-muted aspect-[3/4] border border-outline-variant">
+<!-- Preview Image Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center w-full h-full" data-alt="A sophisticated, high-end lifestyle photograph of a female model wearing elegant gold jewelry, including a necklace and earrings. The style is 'Quiet Luxury' with warm, soft lighting, neutral creamy tones, and a minimalist background that emphasizes the craftsmanship of the jewelry. The image has a clean, light mode aesthetic suitable for a premium brand lookbook." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFI88n3zwPwlvWIYXweMLV2fijM5iHYMybgUW2i5aGDEPODSt3usIbSis7R2mxHOBMjRSTbxnO8yyzmfeM4rtZJ3NqnVkuoEbweloT4lRrUjHXigVz5GSso9d0a6BE-mkfu7xcpKvO31CoeghQ7NiBwiGHnpQZcSXlHb3nb5laQQwmhJ-hTk5Fv4zjc0ncBDJ7LZ5SGZ8BlbW3j7_5Hu1dAK6sWz-Vee57owkUkz_3T_VmHC7oaoXl1QDmo_gEI7pF2oebZfKkQRRs')"></div>
+<!-- Shop this look dots (Draggable representation) -->
+<div class="absolute top-[35%] left-[45%] w-8 h-8 -ml-4 -mt-4 bg-white rounded-full flex items-center justify-center cursor-move shadow-lg border border-outline-variant group">
+<div class="w-3 h-3 bg-antique-gold rounded-full"></div>
+<!-- Tooltip representation -->
+<div class="absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-surface text-on-surface py-2 px-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-outline-variant z-10 pointer-events-none">
+<p class="font-label-md text-label-md font-bold">Qızıl Boyunbağı</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">1,250 AZN</p>
+</div>
+</div>
+<div class="absolute top-[25%] left-[60%] w-8 h-8 -ml-4 -mt-4 bg-white rounded-full flex items-center justify-center cursor-move shadow-lg border border-outline-variant group">
+<div class="w-3 h-3 bg-antique-gold rounded-full"></div>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-4 text-center">Nöqtələri sürükləyərək məhsulların üzərinə yerləşdirin.</p>
+<div class="mt-6 flex gap-4">
+<button class="flex-1 bg-transparent border border-outline text-on-surface font-label-md text-label-md py-3 rounded-lg hover:bg-surface-container-high transition-colors">
+                            Ləğv et
+                        </button>
+<button class="flex-1 bg-antique-gold text-charcoal-text font-label-md text-label-md py-3 rounded-lg hover:bg-gold-dark transition-colors font-bold">
+                            Yadda Saxla &amp; Yayımla
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Published Grid -->
+<div class="mt-section-gap">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Yayımlanmış Şəkillər</h3>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant rounded hover:bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<button class="p-2 border border-outline-variant rounded hover:bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Grid Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow border border-surface-variant group">
+<div class="relative aspect-[4/5] bg-surface-muted">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full" data-alt="A close-up fashion shot of hands wearing multiple minimalist gold rings and delicate bracelets. The setting is bright and airy with organic textures like linen and light wood in the background. The aesthetic is refined and luxurious, with a warm color palette typical of high-end jewelry brand imagery." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmKUiM8uQoMbBhC5hv1NZoJX99EuiRs-6xn6ebLEeDoLrLiKbLuXogINAETnug-p2ndLkV7x9MPb7T9A6FwdXZob5UUc-_eAgwzXbvGREFQ8xd3gvm4mjSus-e_cPLfw5PGkDdilkNcazGRhXVtGT4WaRnpFfKq2eSGplcUuNopwDhD028B4zZB_G71OcOjvZoSRIM7BsuVnE9jWOtwgvtt07V7p0sdPfr0VY6-G4Cu_sROAS8yhyogJGUWfr1hGYw28kQ60jrXUo1')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+<button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-on-surface hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-error hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="absolute top-3 left-3 bg-white/90 px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase text-on-surface backdrop-blur-sm">
+                            Gündəlik Zəriflik
+                        </div>
+</div>
+<div class="p-4">
+<h4 class="font-title-lg text-title-lg text-on-surface truncate">Bahar Kolleksiyası Detalları</h4>
+<div class="flex justify-between items-center mt-2">
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined" style="font-size: 14px;">sell</span>
+                                3 Məhsul
+                            </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">12 Okt 2023</p>
+</div>
+</div>
+</div>
+<!-- Grid Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow border border-surface-variant group">
+<div class="relative aspect-[4/5] bg-surface-muted">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full" data-alt="A portrait of a male model in a tailored suit wearing a luxury gold watch and a subtle tie clip. The lighting is crisp and modern, creating a sophisticated and professional atmosphere. The color scheme is dominated by warm whites, creams, and the rich gold of the accessories." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC42KnqSLxaN5YplSNhedu7xlPHDIIfYm1di7WJyff2kkjikLLu8PilmWRFasS22QOZ_3H5mYpaxFlvqdFWuurceT7I74CA2x8xmF00F4NCGUCE7vRLcQ4Pb9G1tJBKepWjNd_Qm61dn2op43kNED0ZOzBd1Vzv7J7iz-k-7D3bnylQS9It9tMYEyAztQf1uBHgorvqf0AZhahE7ANbjGvOy5EUigDYRHYeF0UdkLTBZewh7fk117MfuXserwD1K0Gqgfj1ZdT_8Nez')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+<button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-on-surface hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-error hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="absolute top-3 left-3 bg-white/90 px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase text-on-surface backdrop-blur-sm">
+                            Kişi Aksesuarları
+                        </div>
+</div>
+<div class="p-4">
+<h4 class="font-title-lg text-title-lg text-on-surface truncate">Klassik Saat Təqdimatı</h4>
+<div class="flex justify-between items-center mt-2">
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined" style="font-size: 14px;">sell</span>
+                                1 Məhsul
+                            </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">08 Okt 2023</p>
+</div>
+</div>
+</div>
+<!-- Grid Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow border border-surface-variant group">
+<div class="relative aspect-[4/5] bg-surface-muted">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full" data-alt="An elegant, soft-focus shot of a bride getting ready, highlighting a stunning diamond and gold engagement ring and matching pendant. The mood is romantic and serene, with soft warm light filtering through a window, highlighting the brilliance of the jewelry against a backdrop of ivory silk." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5ODfM8kCeLMRZlvg9HIusJGPA99ixME1WWfyIsIAjOVl5zrqJmUinE92XRtLd-O1XjCF8ZbQmKBSA07AAkRmrhez3hb6rP24AcrvBxEcEGep2Fv_WVMuCNtvpaPzX3Lki-we8BhOjIc2Xpeyk6jXcRWxcH8Oi_KDgfvxWUQ9SvJjwkSP2kwz858Cjwm2emokXhBDUW3sPofbTRbazTdJ2OjxC_0d1Mj-U2VigF5GbCwiP7RI13YuC8ZqYXZVgElTNtDdgnhWhay_B')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+<button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-on-surface hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-error hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="absolute top-3 left-3 bg-white/90 px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase text-on-surface backdrop-blur-sm">
+                            Toy və Nişan
+                        </div>
+</div>
+<div class="p-4">
+<h4 class="font-title-lg text-title-lg text-on-surface truncate">Gəlinlik Dəsti</h4>
+<div class="flex justify-between items-center mt-2">
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined" style="font-size: 14px;">sell</span>
+                                2 Məhsul
+                            </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">01 Okt 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

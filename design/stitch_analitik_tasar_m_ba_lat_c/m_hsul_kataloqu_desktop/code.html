@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="az"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Anar Jewellery - Üzüklər</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#fcf9f3",
+                        "primary-fixed-dim": "#c9c6c1",
+                        "surface-muted": "#F2EFE9",
+                        "antique-gold": "#C5A059",
+                        "on-primary-fixed-variant": "#474743",
+                        "secondary-fixed-dim": "#e9c176",
+                        "inverse-primary": "#c9c6c1",
+                        "surface-container-highest": "#e5e2dc",
+                        "surface-container-low": "#f6f3ed",
+                        "on-surface": "#1c1c18",
+                        "surface-tint": "#5f5e5a",
+                        "on-primary-container": "#72706c",
+                        "secondary-fixed": "#ffdea5",
+                        "charcoal-text": "#1A1A1A",
+                        "surface": "#fcf9f3",
+                        "secondary-container": "#fed488",
+                        "gold-light": "#E3D2B0",
+                        "surface-variant": "#e5e2dc",
+                        "surface-container-high": "#ebe8e2",
+                        "inverse-surface": "#31312d",
+                        "gold-dark": "#9E7B3B",
+                        "ivory-base": "#F9F6F0",
+                        "outline-variant": "#c8c7be",
+                        "tertiary": "#5f5e5e",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-secondary-fixed": "#261900",
+                        "surface-container": "#f0eee8",
+                        "primary-fixed": "#e5e2dc",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#727070",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#785a1a",
+                        "on-surface-variant": "#474741",
+                        "on-primary-fixed": "#1c1c18",
+                        "secondary": "#775a19",
+                        "primary": "#5f5e5a",
+                        "tertiary-container": "#f9f6f5",
+                        "surface-dim": "#dcdad4",
+                        "outline": "#787770",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#f9f6f0",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "background": "#fcf9f3",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "inverse-on-surface": "#f3f0ea",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1c1c18",
+                        "tertiary-fixed": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "8px",
+                        "stack-lg": "24px",
+                        "margin-mobile": "20px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f3;
+            color: #1c1c18;
+        }
+        .luxury-shadow {
+            box-shadow: 0px 4px 20px rgba(26, 26, 26, 0.04);
+        }
+        .luxury-shadow-hover:hover {
+            box-shadow: 0px 8px 30px rgba(26, 26, 26, 0.08);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center space-x-8">
+<a class="font-headline-md text-headline-md font-bold text-on-surface" href="#">Anar Jewellery</a>
+<nav class="hidden md:flex space-x-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-gold-dark transition-colors duration-300" href="#">Ana səhifə</a>
+<a class="font-label-md text-label-md text-antique-gold border-b-2 border-antique-gold pb-1 opacity-80 transition-opacity" href="#">Üzüklər</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-gold-dark transition-colors duration-300" href="#">Boyunbağılar</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-gold-dark transition-colors duration-300" href="#">Sırğalar</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-gold-dark transition-colors duration-300" href="#">Qolbaqlar</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-gold-dark transition-colors duration-300" href="#">Dəstlər</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-gold-dark transition-colors duration-300" href="#">Qızıl külçə</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4 text-antique-gold">
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors"><span class="material-symbols-outlined">shopping_bag</span></button>
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors"><span class="material-symbols-outlined">person</span></button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Breadcrumb & Header -->
+<div class="mb-stack-lg">
+<nav aria-label="Breadcrumb" class="flex text-on-surface-variant font-label-sm text-label-sm mb-4">
+<ol class="inline-flex items-center space-x-1 md:space-x-2">
+<li class="inline-flex items-center">
+<a class="hover:text-antique-gold transition-colors" href="#">Ana səhifə</a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<span class="text-on-surface font-semibold">Üzüklər</span>
+</div>
+</li>
+</ol>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-stack-md border-b border-outline-variant pb-stack-md">
+<h1 class="font-display-lg-mobile md:font-display-lg text-on-surface">Eleqant Üzüklər</h1>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Çeşidlə:</span>
+<select class="bg-transparent border border-outline-variant rounded-lg py-1.5 px-3 font-label-md text-label-md text-on-surface focus:border-antique-gold focus:ring-1 focus:ring-antique-gold outline-none">
+<option>Populyarlıq</option>
+<option>Qiymət: Azdan çoxa</option>
+<option>Qiymət: Çoxdan aza</option>
+<option>Ən yenilər</option>
+</select>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-64 flex-shrink-0 space-y-stack-md">
+<div class="bg-surface-container-lowest p-stack-md rounded-xl luxury-shadow">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-stack-md">Filtrlər</h3>
+<!-- Filter Group: Metal -->
+<div class="border-b border-surface-container-high pb-4 mb-4">
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-2 font-semibold">Metal növü</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-antique-gold focus:ring-antique-gold" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">Qızıl</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-outline-variant text-antique-gold focus:ring-antique-gold" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">Gümüş</span>
+</label>
+</div>
+</div>
+<!-- Filter Group: Purity -->
+<div class="border-b border-surface-container-high pb-4 mb-4">
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-2 font-semibold">Əyar</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-antique-gold focus:ring-antique-gold" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">585</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-outline-variant text-antique-gold focus:ring-antique-gold" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">750</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-outline-variant text-antique-gold focus:ring-antique-gold" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">916</span>
+</label>
+</div>
+</div>
+<!-- Filter Group: Stone -->
+<div class="border-b border-surface-container-high pb-4 mb-4">
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-2 font-semibold">Daş növü</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-antique-gold focus:ring-antique-gold" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">Brilyant</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-outline-variant text-antique-gold focus:ring-antique-gold" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">Yaqut</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-outline-variant text-antique-gold focus:ring-antique-gold" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">Daşsız</span>
+</label>
+</div>
+</div>
+<!-- Filter Group: Condition -->
+<div>
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-2 font-semibold">Vəziyyət</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-antique-gold focus:ring-antique-gold" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">Yeni</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-outline-variant text-antique-gold focus:ring-antique-gold" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">İşlənmiş</span>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-grow">
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-stack-md lg:gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden luxury-shadow luxury-shadow-hover transition-all duration-300 group">
+<div class="relative aspect-square overflow-hidden bg-surface-muted">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="A close-up studio photograph of a highly polished 585 rose gold ring featuring a prominent central brilliant-cut diamond surrounded by a delicate halo of smaller stones. The ring rests gracefully on a pristine white silk fabric. The lighting is soft and diffused, emphasizing the flawless facets of the diamonds and the warm tone of the gold against a clean, light-mode background. The overall aesthetic is one of quiet luxury, elegance, and timeless craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0ZWbUCz3-_Td29oE89ds-1Ooa_h6MKnDy4K3f30e05dQzDGRRTqz3nVMxnGEIpWYVRICjpjUIwJArNaMiu_ubMbW7AdMVQmUCht55eWvzWDHxMtgdrcziW2jsEupdkiRfoFAIJkWAvhbLNPWiyfpr8-teEFT3XRPWE10ptI62-4fima5DfU0OO6NFIsJzRhCrQAZelgFPMT30Knz6wYLYt5vHfbEDAsFjNT0-6kSsD30Nx49zZiqTNBhBIxzeUssE2J5H2ge21k8w"/>
+<div class="absolute top-2 right-2">
+<button class="bg-white/80 backdrop-blur-sm p-1.5 rounded-full text-on-surface-variant hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-stack-sm md:p-stack-md flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="font-label-md md:font-body-lg text-label-md md:text-body-lg text-on-surface font-semibold truncate pr-2">Brilyant Təkqaş Üzük</h3>
+<span class="font-label-sm text-label-sm text-antique-gold shrink-0">Yeni</span>
+</div>
+<div class="flex gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>585 Əyar</span>
+<span>•</span>
+<span>2.4 Qram</span>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">850 AZN</span>
+<button class="text-antique-gold hover:text-gold-dark">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden luxury-shadow luxury-shadow-hover transition-all duration-300 group">
+<div class="relative aspect-square overflow-hidden bg-surface-muted">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="A macro shot of an elegant 750 yellow gold band ring, set with a striking oval-cut ruby flanked by small pavé diamonds. The jewelry piece is presented on a minimalist ivory matte surface with subtle, ambient shadows adding depth without harshness. The light-mode palette highlights the deep crimson of the ruby and the lustrous finish of the gold, conveying a sense of refined heritage and premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxqdcViQy4NvTyJ6F5AA7YRrNViBavx9FJBGYYj8oyYHP1ULY-rTuUBlIt149c4NPzkyaBLT-4DZgkJfDnqD1mv_wfT0EBVCKz848wtkucYXEk4R9bMIsb2ThQdNidR3PSzAZqlxR_p_E-Xfbe78yChDZIDAyWNqojVEUHges8Itq2zKJ5-rjo4k7XO4I2M2Bwri2afBnH3RWBtIUlKprzTUHxdZFG0GB0d0v8yVfzZSJS9gjzeZ0LUux-jinC9vN_REQ4hUncSNOl"/>
+</div>
+<div class="p-stack-sm md:p-stack-md flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="font-label-md md:font-body-lg text-label-md md:text-body-lg text-on-surface font-semibold truncate pr-2">Yaqut Qaşlı Üzük</h3>
+<span class="font-label-sm text-label-sm text-antique-gold shrink-0">Yeni</span>
+</div>
+<div class="flex gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>750 Əyar</span>
+<span>•</span>
+<span>3.1 Qram</span>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">1 200 AZN</span>
+<button class="text-antique-gold hover:text-gold-dark">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden luxury-shadow luxury-shadow-hover transition-all duration-300 group">
+<div class="relative aspect-square overflow-hidden bg-surface-muted">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist fine jewelry product photo showing a sleek, modern 585 white gold band ring without any stones. The design is clean and geometric, resting on a smooth, slightly warm cream background. The lighting is precise, creating a soft gradient reflection on the metallic surface, embodying a contemporary, quiet luxury aesthetic typical of high-end boutique catalogs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIqGTlegvPCSWhG-TGOJovF227T2CuGZoQyr4pORklJUnedKvidLboAmfFtufPCgW5DrvvzBQaNFW3sbBQmT0WUGPC4TZRSJF_Vf6a4helrl-U2WSYl3GDmR8jbM-VKtXEppDCOwLXMyz2VGPf25uD2l0ORZZQ4BzKx906Xwm_tpwAB47y7S3-ADkwjShg59nplfdxauNI_odGq9VlqnR7BbqeD1J52wFavkQ4r_a5eRFCuZejnVT2AIUQiPAhg1hUyke1ZdgpcefJ"/>
+</div>
+<div class="p-stack-sm md:p-stack-md flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="font-label-md md:font-body-lg text-label-md md:text-body-lg text-on-surface font-semibold truncate pr-2">Klassik Nişan Üzüyü</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant shrink-0">İşlənmiş</span>
+</div>
+<div class="flex gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>585 Əyar</span>
+<span>•</span>
+<span>4.5 Qram</span>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">450 AZN</span>
+<button class="text-antique-gold hover:text-gold-dark">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden luxury-shadow luxury-shadow-hover transition-all duration-300 group">
+<div class="relative aspect-square overflow-hidden bg-surface-muted">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="A beautifully styled photograph of a vintage-inspired 585 rose gold ring featuring intricate filigree work and a cluster of small diamonds. The ring is showcased atop a piece of textured, off-white parchment paper, adding a tactile, organic feel to the composition. The lighting is warm and directional, casting gentle, diffused shadows that enhance the depth and craftsmanship of the piece in a serene, luxurious setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5FApA_CGwgOamQcyuzFvMCrZx7_xGQqwo1vZAPTVClB9Q-MKU6ASSzTq2Ft3SofyYlUiDay_KiGe7re4a38BnCk3NrKPS76w-6nK4HO8-Tqt_Zj58jVllvxUHfAEn4trxQszpj6PVmdMBgDvj33yqWA4zI1GrB-RTpwJU1UJV6qp5O0Y6GSl7ja1zouhCGLL1QCDgrBTR6ubbPeA6eKM6mnm91J38-mcLshGDQIVILn1G8d7JWJmdmhRCpi7YUNLhXtCH52I88ZTg"/>
+</div>
+<div class="p-stack-sm md:p-stack-md flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="font-label-md md:font-body-lg text-label-md md:text-body-lg text-on-surface font-semibold truncate pr-2">Vintage Stil Üzük</h3>
+<span class="font-label-sm text-label-sm text-antique-gold shrink-0">Yeni</span>
+</div>
+<div class="flex gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>585 Əyar</span>
+<span>•</span>
+<span>3.8 Qram</span>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">920 AZN</span>
+<button class="text-antique-gold hover:text-gold-dark">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-stack-lg flex justify-center items-center space-x-2">
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:text-antique-gold hover:border-antique-gold transition-colors"><span class="material-symbols-outlined text-[20px]">chevron_left</span></button>
+<button class="w-10 h-10 flex items-center justify-center rounded bg-antique-gold text-white font-label-md text-label-md">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-on-surface hover:text-antique-gold hover:border-antique-gold transition-colors font-label-md text-label-md">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-on-surface hover:text-antique-gold hover:border-antique-gold transition-colors font-label-md text-label-md">3</button>
+<span class="text-on-surface-variant">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:text-antique-gold hover:border-antique-gold transition-colors"><span class="material-symbols-outlined text-[20px]">chevron_right</span></button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white border-t border-outline-variant shadow-lg fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-low transition-transform duration-150 rounded-lg p-1" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+            Ana səhifə
+        </a>
+<a class="flex flex-col items-center justify-center text-antique-gold font-bold font-label-sm text-label-sm scale-95 transition-transform duration-150 rounded-lg p-1" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+            Kateqoriyalar
+        </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-low transition-transform duration-150 rounded-lg p-1" href="#">
+<span class="material-symbols-outlined mb-1">calculate</span>
+            Hesabla
+        </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-low transition-transform duration-150 rounded-lg p-1" href="#">
+<span class="material-symbols-outlined mb-1">chat</span>
+            Əlaqə
+        </a>
+</nav>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant full-width mt-auto mb-16 md:mb-0">
+<div class="w-full py-section-gap px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-4 font-bold">Anar Jewellery</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Anar Jewellery. Bütün hüquqlar qorunur.</p>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-3">Məlumat</h3>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">Haqqımızda</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">Tez-tez verilən suallar</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold" href="#">Çatdırılma şərtləri</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-3">Kömək</h3>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-antique-gold underline transition-all focus:outline-none focus:ring-1 focus:ring-antique-gold flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[20px]">chat</span> WhatsApp ilə əlaqə</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

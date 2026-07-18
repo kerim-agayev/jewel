@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="light" lang="az"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Satışlar - Qızıl Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#ebe8e2",
+                        "secondary": "#775a19",
+                        "surface-container-highest": "#e5e2dc",
+                        "primary-fixed": "#e5e2dc",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#261900",
+                        "primary-fixed-dim": "#c9c6c1",
+                        "surface-bright": "#fcf9f3",
+                        "gold-light": "#E3D2B0",
+                        "inverse-primary": "#c9c6c1",
+                        "surface-tint": "#5f5e5a",
+                        "secondary-fixed-dim": "#e9c176",
+                        "background": "#fcf9f3",
+                        "surface-container": "#f0eee8",
+                        "antique-gold": "#C5A059",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-primary": "#ffffff",
+                        "charcoal-text": "#1A1A1A",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ea",
+                        "inverse-surface": "#31312d",
+                        "on-surface": "#1c1c18",
+                        "on-primary-fixed": "#1c1c18",
+                        "primary": "#5f5e5a",
+                        "tertiary-container": "#f9f6f5",
+                        "gold-dark": "#9E7B3B",
+                        "on-surface-variant": "#474741",
+                        "surface-muted": "#F2EFE9",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e5e2dc",
+                        "on-secondary-container": "#785a1a",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "ivory-base": "#F9F6F0",
+                        "on-error": "#ffffff",
+                        "outline": "#787770",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c8c7be",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed": "#ffdea5",
+                        "tertiary": "#5f5e5e",
+                        "surface-dim": "#dcdad4",
+                        "surface-container-low": "#f6f3ed",
+                        "on-primary-fixed-variant": "#474743",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary-container": "#72706c",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#727070",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#f9f6f0",
+                        "secondary-container": "#fed488",
+                        "surface": "#fcf9f3",
+                        "on-background": "#1c1c18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "section-gap": "80px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom styling for status badges */
+        .status-badge {
+            @apply px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="h-screen w-64 fixed left-0 top-0 bg-ivory-base dark:bg-surface-dim border-r border-outline-variant dark:border-outline flex flex-col py-6 z-50">
+<!-- Brand / Header -->
+<div class="px-6 mb-8 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-antique-gold mb-4">
+<img alt="Admin Avatarı" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAksLVeSRJ3-ak9hfgVnX3AlnhDapcJx62ZVarnm3U9PO2dO4TGGLhsdHjsYyL6i6UUIkT5wVxJwtngyqWO9Gou1BMMiV8oOgfEfOBD2ARGzfu1gzJLze8OrZXDQWAiIIRpJYKIYGE_UmbkmcriiOSm398RDinr3-l3rcYMpXBX-N0sEAE92PwmPCoaOXeLldJyYAhKxMAWqXUX-d_4EO9k0Q-bdJo1R2eZ8ngaLxkJh4Ry7PYXHnZikgGAohflU8R2M7m9xevpS2YK"/>
+</div>
+<h1 class="font-headline-sm text-headline-sm font-semibold text-charcoal-text dark:text-on-surface text-center">Qızıl Admin</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 text-center">Baş Menecer</p>
+</div>
+<!-- CTA -->
+<div class="px-4 mb-6">
+<button class="w-full bg-antique-gold text-charcoal-text font-label-md text-label-md py-3 rounded-lg hover:bg-gold-light transition-colors duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                Yeni Satış
+            </button>
+</div>
+<!-- Navigation Links -->
+<ul class="flex-1 flex flex-col gap-1 px-2 overflow-y-auto">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Panel</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">diamond</span>
+<span class="font-label-md text-label-md">Məhsullar</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary font-bold border-r-4 border-antique-gold bg-surface-container-high dark:bg-surface-container-highest rounded-l-lg opacity-80 scale-[0.99] transition-transform" href="#">
+<span class="material-symbols-outlined filled">shopping_cart</span>
+<span class="font-label-md text-label-md">Satışlar</span>
+</a>
+</li>
+<li>
+<div class="flex items-center justify-between px-4 py-3 text-on-surface-variant/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-md text-label-md">Müştərilər</span>
+</div>
+<span class="text-[10px] bg-surface-variant text-on-surface-variant px-1.5 rounded">Tezliklə</span>
+</div>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-md text-label-md">Hesabatlar</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Parametrlər</span>
+</a>
+</li>
+</ul>
+<!-- Footer Actions -->
+<div class="px-4 mt-auto pt-4 border-t border-outline-variant">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-secondary hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Çıxış</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="ml-64 flex-1 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline">
+<div class="flex items-center gap-4 flex-1">
+<h2 class="font-title-lg text-title-lg font-bold text-charcoal-text dark:text-on-surface mr-6">Satışların İdarə Edilməsi</h2>
+<div class="relative max-w-md w-full hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-muted border border-outline-variant rounded-full font-body-md text-body-md text-on-surface focus:outline-none focus:border-antique-gold focus:ring-1 focus:ring-antique-gold transition-colors placeholder:text-on-surface-variant" placeholder="Satış ID və ya müştəri axtar..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Notifications" class="p-2 text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-antique-gold cursor-pointer hover:scale-95 transition-all">
+<img alt="Profil" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrt8Evtp7URURgKY3TyHX91n5tQyuoV2lRgGt4nyZzKOBqWuxXq7fLRP90DcVligHDC-OO5-tU-3RAEpYorXXVMtVlQAMbPQFpNu7w8zEIO1NkyqAuxB2e6upZLOwWiesuehw9SN-d1x6tWxN4M6Tu-FKsfGjGWJu7oVMIZbi80iCVD72Vmnq86myIfQO7RCKd_xssWuxdSAmGKoakCp1AOQxsHC35AiLjjtJXOu2bW5DqqXnlkcY_1Oyh-msko_9Db27KDOTrFC-M"/>
+</div>
+</div>
+</header>
+<!-- Core Content -->
+<main class="flex-1 p-8 bg-background">
+<!-- Tabs Strip -->
+<div class="flex border-b border-outline-variant mb-8">
+<button class="px-8 py-4 font-label-md text-label-md border-b-2 border-antique-gold text-secondary font-semibold transition-all">
+                    Satış qeydləri
+                </button>
+<button class="px-8 py-4 font-label-md text-label-md border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-all">
+                    Satıcı performansı
+                </button>
+</div>
+<!-- Filter Bar -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(26,26,26,0.04)] border border-surface-container p-6 mb-8">
+<div class="flex flex-wrap gap-4 items-end">
+<!-- Category -->
+<div class="flex-1 min-w-[150px]">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5">Kateqoriya</label>
+<select class="w-full bg-surface-muted border border-outline-variant rounded-lg py-2 px-3 text-body-md focus:ring-antique-gold focus:border-antique-gold outline-none">
+<option>Hamısı</option>
+<option>Üzük</option>
+<option>Boyunbağı</option>
+<option>Bilərzik</option>
+<option>Sırğa</option>
+</select>
+</div>
+<!-- Metal -->
+<div class="flex-1 min-w-[150px]">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5">Metal</label>
+<select class="w-full bg-surface-muted border border-outline-variant rounded-lg py-2 px-3 text-body-md focus:ring-antique-gold focus:border-antique-gold outline-none">
+<option>Hamısı</option>
+<option>Qızıl (585)</option>
+<option>Qızıl (750)</option>
+<option>Gümüş</option>
+</select>
+</div>
+<!-- Status -->
+<div class="flex-1 min-w-[150px]">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5">Status</label>
+<select class="w-full bg-surface-muted border border-outline-variant rounded-lg py-2 px-3 text-body-md focus:ring-antique-gold focus:border-antique-gold outline-none">
+<option>Hamısı</option>
+<option>Tamamlanıb</option>
+<option>İadə</option>
+<option>Gözləmədə</option>
+</select>
+</div>
+<!-- Price Range -->
+<div class="flex-[2] min-w-[200px]">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5">Qiymət aralığı (AZN)</label>
+<div class="flex items-center gap-2">
+<input class="w-full bg-surface-muted border border-outline-variant rounded-lg py-2 px-3 text-body-md focus:ring-antique-gold focus:border-antique-gold outline-none" placeholder="Min" type="number"/>
+<span class="text-on-surface-variant">-</span>
+<input class="w-full bg-surface-muted border border-outline-variant rounded-lg py-2 px-3 text-body-md focus:ring-antique-gold focus:border-antique-gold outline-none" placeholder="Max" type="number"/>
+</div>
+</div>
+<!-- Filter Button -->
+<button class="bg-surface-container-highest text-secondary border border-outline-variant px-6 py-2 rounded-lg font-label-md hover:bg-surface-variant transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">filter_list</span>
+                        Filtrlə
+                    </button>
+</div>
+</div>
+<!-- Sales Table -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(26,26,26,0.04)] overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-muted border-b border-surface-container">
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Tarix</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Məhsul</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Satıcı</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider text-right">Məbləğ</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider text-center">Barter</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider text-center">Status</th>
+<th class="py-4 px-6"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-charcoal-text">
+<!-- Sale Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-6 text-on-surface-variant">14 May, 2024</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-muted border border-outline-variant overflow-hidden p-1">
+<img alt="Ring" class="w-full h-full object-contain mix-blend-multiply opacity-80" onerror="this.src='https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&amp;fit=crop&amp;q=80&amp;w=200'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB76wF0_W6H6Y_q2-qT9o8x_e3_T7sS0jWkY5j7P7X0P7X0P7X0P7X0P7X0P7X0P7X0P7X0P7X0P7X0P7X0P7X0P7X0"/>
+</div>
+<div>
+<p class="font-medium">Brilyant Üzük</p>
+<p class="text-xs text-on-surface-variant">ID: #SL-4592</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">Aygün Məmmədova</td>
+<td class="py-4 px-6 text-right font-semibold text-secondary">3,450 AZN</td>
+<td class="py-4 px-6 text-center">
+<span class="material-symbols-outlined text-outline-variant">close</span>
+</td>
+<td class="py-4 px-6 text-center">
+<span class="px-2 py-1 bg-[#E8F5E9] text-[#2E7D32] rounded-full text-[11px] font-bold uppercase tracking-wider">Tamamlanıb</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="p-1 hover:bg-surface-variant rounded transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Sale Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-6 text-on-surface-variant">14 May, 2024</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-muted border border-outline-variant overflow-hidden p-1">
+<img alt="Necklace" class="w-full h-full object-contain mix-blend-multiply opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMgDQuhh6Dwc9cUzc2_EGz_yLsZvhXQ7P7oCaDjTEycCuao8WjSQ9R-En7bQoYntPkyngl5IojE3cBRoSYcAwdCkMDSKGo1epBFOBhD5PEBiXqdKnBnv1ExU-rGGbTtqCF1nv85owggERuV4qWJVStGHzdTPezdoV0oGFZ4nAYoXWocTSLZvSxe4B0ttBDmbmZi2iKPYHDvET_5ivN7B6AVH0Z3t0CW2otvHmAu-N7crbnjzEUKCVPFd6RKzD2JLVJ1Dcerw4ADm6A"/>
+</div>
+<div>
+<p class="font-medium">Qızıl Boyunbağı</p>
+<p class="text-xs text-on-surface-variant">ID: #SL-4588</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">Rəşad Əliyev</td>
+<td class="py-4 px-6 text-right font-semibold text-secondary">1,200 AZN</td>
+<td class="py-4 px-6 text-center">
+<span class="material-symbols-outlined text-[#25D366] filled">check_circle</span>
+</td>
+<td class="py-4 px-6 text-center">
+<span class="px-2 py-1 bg-[#E8F5E9] text-[#2E7D32] rounded-full text-[11px] font-bold uppercase tracking-wider">Tamamlanıb</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="p-1 hover:bg-surface-variant rounded transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Sale Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-6 text-on-surface-variant">13 May, 2024</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-muted border border-outline-variant overflow-hidden p-1">
+<img alt="Earrings" class="w-full h-full object-contain mix-blend-multiply opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn4lvwDPFfFNzRPp33aAAoq9bMZ7BHYGPJV7F5nD6vQ1VROGCBsVLburEqHtY3ahm7cLNYh2KWzAm8IIoWCwFMTaYqgBzrsqg1A0mF51hsW0R4th9P7xkB19Y8IAhFrlpYINSJe6lOib0sHJv0nHIGABtJgDEUquMf7ijyY0FXitS5K-1iaCVxfWuVpuclNGw6getPWONVQNxrCSFySSba67pB6Yf8nPxL7MCAUA2msmT7kiUressbo0beq3ooLjl1tIFb4iwJBmvJ"/>
+</div>
+<div>
+<p class="font-medium">Safir Sırğalar</p>
+<p class="text-xs text-on-surface-variant">ID: #SL-4581</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">Lalə Hüseynova</td>
+<td class="py-4 px-6 text-right font-semibold text-secondary">4,800 AZN</td>
+<td class="py-4 px-6 text-center">
+<span class="material-symbols-outlined text-outline-variant">close</span>
+</td>
+<td class="py-4 px-6 text-center">
+<span class="px-2 py-1 bg-error-container text-error rounded-full text-[11px] font-bold uppercase tracking-wider">İadə</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="p-1 hover:bg-surface-variant rounded transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Sale Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-6 text-on-surface-variant">13 May, 2024</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-muted border border-outline-variant overflow-hidden p-1 text-center flex items-center justify-center font-bold text-outline">B</div>
+<div>
+<p class="font-medium">Gümüş Bilərzik</p>
+<p class="text-xs text-on-surface-variant">ID: #SL-4575</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">Elvin Qasımov</td>
+<td class="py-4 px-6 text-right font-semibold text-secondary">850 AZN</td>
+<td class="py-4 px-6 text-center">
+<span class="material-symbols-outlined text-outline-variant">close</span>
+</td>
+<td class="py-4 px-6 text-center">
+<span class="px-2 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-[11px] font-bold uppercase tracking-wider">Gözləmədə</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="p-1 hover:bg-surface-variant rounded transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-4 border-t border-surface-container flex justify-between items-center bg-surface-bright">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cəmi: 458 satış qeydi</span>
+<div class="flex gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-antique-gold text-white font-label-sm">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant font-label-sm">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant font-label-sm">3</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
