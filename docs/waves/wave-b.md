@@ -1,6 +1,6 @@
 # Wave B — Storefront Çəkirdəyi
 
-**Status:** Başlanmayıb (Wave A-nı gözləyir)
+**Status:** Bitib (2026-07-19)
 
 ## Əhatə
 
@@ -12,10 +12,10 @@
 
 ## Bitmə meyarı
 
-- Bütün kateqoriyalar üzrə filtrlər işləyir (metal, əyar, status, qiymət aralığı, kateqoriyaya-xas atributlar)
-- Qızıl hesablayıcı bugünkü real qiyməti göstərir
-- Hər məhsul səhifəsində OG meta teqləri var (WhatsApp önizləməsi üçün)
+- [x] Bütün kateqoriyalar üzrə filtrlər işləyir (metal, əyar, status, qiymət aralığı, kateqoriyaya-xas atributlar) — brauzerdə yoxlanıldı, hər filtr qrupu üçün faktiki fərqli dəyərlər mövcuddur (o cümlədən status: 12 USED/282 NEW)
+- [x] Qızıl hesablayıcı bugünkü real qiyməti göstərir — `gold-api.com`-dan canlı çəkilən qiymət (219.68 AZN/qram) düzgün hesablanır, doğrulandı
+- [x] Hər məhsul səhifəsində OG meta teqləri var (WhatsApp önizləməsi üçün) — `generateMetadata()` og:title/og:description/og:image/twitter:* yaradır, brauzerdə təsdiqləndi
 
 ## Bitəndə
 
-`docs/phase_1/logs.md`-ə özət yaz, statusu yenilə, Wave C-yə keç.
+`docs/phase_1/logs.md`-ə özət yazıldı, status yeniləndi. Wave C-yə keçmək üçün istifadəçi təsdiqi gözlənilir.

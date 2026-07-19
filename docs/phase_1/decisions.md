@@ -55,3 +55,19 @@ Sketchfab/Meshy/Sloyd kimi mənbələr araşdırıldı, amma qərar: `TorusGeome
 
 ### [2026-07-19 — Wave A] Admin marşrutlaşdırmasının lokal (locale) prefiksi sualı Wave C-yə saxlanıldı
 `CLAUDE.md`-də ziddiyyət var: qovluq diaqramı `/admin`-i `/[locale]`-dən kənarda (bacı qovluq) göstərir, amma "Dil dəstəyi" bölməsi next-intl mexanizminin `/admin` marşrutlarına da genişləndirildiyini deyir. Wave A-da heç bir `/admin` route hələ qurulmadığı üçün bu sual bloklayıcı deyil — `middleware.ts` yalnız `/[locale]` üçün lokal aşkarlama/yönləndirmə edir. Wave C admin səhifələri qurulmazdan əvvəl qərar verilməlidir: `/admin` URL-də lokal prefiksi olacaq, yoxsa yalnız cookie-əsaslı lokal seçimi?
+
+### [2026-07-19 — Wave B planlaşdırması] Sahte seed kataloqu üçün şəkil mənbəyi: Pexels API
+
+**Qərar:** Sahte 264-300 məhsullu seed kataloqunun şəkilləri **Pexels API**-dən gəlir (Unsplash yox), kateqoriyaya uyğun axtarış terminləri ilə ("gold ring", "gold necklace", "gold earrings", "gold bracelet", "gold pendant", saat kateqoriyası üçün "wristwatch", qızıl külçə/sikkə üçün "gold bar", broş üçün "brooch pin") sorğulanır, kateqoriya başına BİR DƏFƏ (məhsul başına yox) 15-25 şəkillik hovuz kimi endirilir və Cloudflare R2-yə mövcud `uploadToR2()` funksiyası ilə yüklənir — hovuzdan hər məhsula təsadüfi 1-4 şəkil təyin olunur.
+
+**Niyə Pexels, Unsplash yox:** Unsplash-ın pulsuz API tier-i istehsal təsdiqi (manual review) alınana qədər saat başına 50 sorğu ilə məhdudlaşır, üstəlik API qaydaları hotlink + endirmə-izləmə tərəfinə meyillidir. Pexels API açarını dərhal (təsdiq gözləmədən) verir, saat başına 200 / ayda 20,000 sorğu tanıyır, lisenziyası isə endirmə, dəyişdirmə və (kommersiya daxil) yenidən istifadəni icbari mənbə göstərmədən aydın şəkildə icazə verir — R2-yə köçürüb yenidən host edəcəyimiz toplu bir seed işi üçün daha uyğun seçim.
+
+**Niyə boş/generik placeholder YOX:** boz placeholder qutuları olan bir zərgərlik demosu bitməmiş görünərdi və CLAUDE.md-nin "Layihə xülasəsi" bölməsindəki "real, təsirli demo" məqsədini zəiflədərdi — sahte datanın real statistik nümunəyə kalibrə edilməsinin bütün mənası kataloqun REAL görünməsidir, hətta real olmasa belə.
+
+**Niyə AI-generasiya (Krea/Photta və s.) seed addımı üçün YOX:** həmin iş axını bilərəkdən əl ilə, bir-bir, insan-nəzarətli işləyir — real "Modellərimiz" admin funksiyası üçün doğru yanaşmadır (Wave D, işçi real məhsulu seçir, real AI alətini bir dəfə işə salır), amma ~300 seed məhsulunu avtomatik doldurmaq üçün miqyaslanmır, üstəlik seed-üçün-atılacaq şəkilləri əsl admin iş axını ilə eyni boru xəttinə qarışdırmaq CLAUDE.md-nin diqqətlə ayrı saxladığı bir xüsusiyyəti bulanıqlaşdırardı (bax "Modellərimiz" bölməsi — "yalnız ilkin seed sahtədir, iş axınının özü yox").
+
+**Necə tətbiq olunur:** seed skripti kateqoriya başına bir şəkil hovuzu çəkir (məhsul başına yox), real R2 URL-lərini `ProductImage.url`-da saxlayır, demo təsdiqləndikdən sonra real inventar fotoları gəldikdə bu şəkillər sərbəst şəkildə əvəz olunur.
+
+### [2026-07-19 — Wave B] Cron cədvəli `vercel.json` ilə, `vercel.ts` yox
+Planda ilkin fikir `vercel.ts` idi (Vercel-in yeni tövsiyə etdiyi TypeScript konfiqurasiyası), amma bu, `@vercel/config` paketinin əlavə asılılıq kimi qurulmasını tələb edir — layihə hələ deploy olunmadığı üçün (localhost-da qalır, bax "Demo/staging security") bu fayl bu Wave-də faktiki işə salınmır, sadəcə gələcək deploy üçün hazırlanır. Sadəlik Birinci prinsipinə görə eyni funksionallığı (tək bir cron path+cədvəl) verən, sıfır əlavə asılılıq tələb edən standart `vercel.json` seçildi. Funksional fərq yoxdur, yalnız fayl formatı.
+**Fayl(lar):** `vercel.json`
