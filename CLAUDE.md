@@ -464,6 +464,18 @@ An analysis of 264 real products scraped from the Anar Jewellery store page on 2
 
 **Russian titles:** the real data only has Azerbaijani names (some with a meaningless "(En)" suffix, cleaned up during import). The `titleRu` fields are a DRAFT translated by AI during seeding — this must be clearly marked in the code and comments so it isn't forgotten that it needs human review before the real launch.
 
+## Seed product images (fake catalog)
+
+The "Real data reference" section above only covers the fake catalog's TEXT/NUMERIC data (name, price, purity, weight) — it deliberately doesn't say where the fake catalog's PHOTOS come from, since the real Thunderbit scrape's images aren't usable (no confirmed rights to reuse 24k.az's own product photography).
+
+**Decision:** seed-catalog product images are sourced from the **Pexels API**, queried by category-appropriate search terms ("gold ring," "gold necklace," "gold earrings," "gold bracelet," "gold pendant," "wristwatch" for the fake Watch category, "gold bar" for the fake Gold bar/coin category, "brooch pin" for the fake Brooch category), and uploaded to Cloudflare R2 like any other product image (via the existing `uploadToR2()` in `/lib/r2.ts`).
+
+**Why Pexels, not Unsplash:** Unsplash's free API tier caps at 50 requests/hour until a production application is manually reviewed and approved, and its API guidelines lean toward hotlinking + download-event tracking rather than bulk-downloading and re-hosting elsewhere. Pexels issues an API key instantly (no review wait), allows a generous 200 requests/hour / 20,000/month, and its license explicitly permits downloading, modifying, and reusing photos — commercial use included — without mandatory attribution. That's a much better fit for a one-time bulk seed run that downloads images and re-hosts them on R2.
+
+**How it's fetched (efficiency, not one call per product):** one image POOL is fetched per category (roughly 15-25 images), each uploaded to R2 once — individual products are then randomly assigned 1-4 images from their category's pool, rather than making a fresh Pexels API call per product (which would be both slow and unnecessary against the free-tier rate limit for a ~300-item catalog).
+
+**Explicitly separate from "Modellərimiz" (see below, Wave D):** this is throwaway seed-data imagery for the fake catalog only, chosen because a real-looking stock jewelry photo makes the demo catalog look like actual inventory (unlike a blank/generic placeholder icon, which would undercut the "real, impressive demo" goal), without requiring per-product human curation (unlike the "Modellərimiz" AI-image workflow, which is a deliberate, one-photo-at-a-time admin action that doesn't scale to auto-populating ~300 items). When real inventory photos are entered later (post-demo), these seed images are simply replaced — nothing about this decision touches the "Modellərimiz" workflow itself.
+
 ## Price calculation logic
 
 Every product's displayed price must go through a **single shared function** (`resolveProductPrice()`, `/lib/pricing.ts`) — the storefront, Xəzinə, the "inventory value" KPI on the admin Panel, and Reports all call this same function. The formula is never rewritten separately anywhere else — otherwise an override might show up on one screen and an outdated price on another (this is specifically to prevent that kind of silent inconsistency).
@@ -741,7 +753,7 @@ Money math is the most dangerous kind of bug:
 DATABASE_URL=
 DIRECT_URL=
 USD_TO_AZN_RATE=1.7
-GOLD_API_URL=https://www.gold-api.com/
+GOLD_API_URL=https://api.gold-api.com/price/XAU
 CRON_SECRET=
 NEXTAUTH_SECRET=
 NEXTAUTH_URL=
@@ -751,6 +763,7 @@ R2_SECRET_ACCESS_KEY=
 R2_BUCKET_NAME=
 R2_PUBLIC_URL=              # r2.dev subdomain or a custom domain
 NEXT_PUBLIC_GA_ID=          # Google Analytics 4 measurement ID, only loaded after cookie consent is given
+PEXELS_API_KEY=              # fake seed-catalog product images only, see "Seed product images (fake catalog)"
 ```
 
 ## Mobile/desktop behavior
