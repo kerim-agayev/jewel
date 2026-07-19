@@ -1,1 +1,108 @@
-{}
+{
+  "nav": {
+    "home": "Ana səhifə",
+    "categories": "Kateqoriyalar",
+    "lookbook": "Modellərimiz",
+    "calculator": "Hesabla",
+    "about": "Haqqımızda",
+    "address": "Ünvan",
+    "contact": "Əlaqə",
+    "favorites": "Sevimlilər",
+    "adminLogin": "Admin girişi"
+  },
+  "footer": {
+    "tagline": "Zərifliyin və etibarın ünvanı.",
+    "linksHeading": "Keçidlər",
+    "contactHeading": "Əlaqə",
+    "workingHours": "İş saatları",
+    "workingHoursValue": "B.e–Cümə 10:00–19:00, Şənbə 10:00–17:00, Bazar bağlıdır (TODO: mağaza sahibi ilə təsdiqlənməlidir)",
+    "copyright": "© 2026 Anar Jewellery"
+  },
+  "common": {
+    "whatsappCta": "WhatsApp-dan sorğu göndər",
+    "callCta": "Zəng et",
+    "instagram": "Instagram",
+    "azn": "AZN"
+  },
+  "ticker": {
+    "label": "Bugünkü qızıl qiyməti",
+    "karatSuffix": "əyar"
+  },
+  "home": {
+    "heroTitle": "Zərifliyin və",
+    "heroTitleAccent": "Etibarın Ünvanı",
+    "heroSubtitle": "Ən incə detallarına qədər düşünülmüş, yüksək keyfiyyətli qızıl zinət əşyaları ilə hər anınızı xüsusi edin.",
+    "heroCta": "Kolleksiyanı kəşf et",
+    "trust1Title": "Pulsuz çatdırılma",
+    "trust1Sub": "Sürətli və təhlükəsiz",
+    "trust2Title": "Köhnə qızılla dəyişdirmə",
+    "trust2Sub": "Sərfəli şərtlərlə",
+    "trust3Title": "Orijinallıq zəmanəti",
+    "trust3Sub": "Rəsmi sertifikatlı məhsullar",
+    "categoriesHeading": "Kateqoriyalar",
+    "newArrivalsHeading": "Yeni gələnlər",
+    "viewAll": "Hamısına bax →"
+  },
+  "category": {
+    "filters": "Filtrlər",
+    "metalType": "Metal növü",
+    "purity": "Əyar",
+    "stoneType": "Daş növü",
+    "stoneless": "Daşsız",
+    "status": "Vəziyyət",
+    "sortLabel": "Çeşidlə",
+    "sortPriceAsc": "Qiymət (artan)",
+    "sortPriceDesc": "Qiymət (azalan)",
+    "sortNewest": "Yeni",
+    "sortPopularity": "Populyarlıq",
+    "noResults": "Bu filtrlərə uyğun məhsul tapılmadı",
+    "resultsCount": "{count} məhsul"
+  },
+  "metalType": {
+    "YELLOW_GOLD": "Sarı qızıl",
+    "WHITE_GOLD": "Ağ qızıl",
+    "ROSE_GOLD": "Çəhrayı qızıl",
+    "PLATINUM": "Platin",
+    "SILVER": "Gümüş",
+    "GOLD_PLATED_SILVER": "Qızıl suyuna salınmış gümüş",
+    "STEEL": "Polad",
+    "BIJOUTERIE": "Bijuteriya"
+  },
+  "productStatus": {
+    "NEW": "Yeni",
+    "USED": "İşlənmiş"
+  },
+  "product": {
+    "goldValue": "Qızıl dəyəri",
+    "laborCost": "İşçilik haqqı",
+    "stoneCost": "Daş",
+    "total": "Ümumi",
+    "specsHeading": "Məhsul Xüsusiyyətləri",
+    "category": "Kateqoriya",
+    "weight": "Çəki",
+    "code": "Kod",
+    "similarHeading": "Buna bənzər məhsullar",
+    "notFound": "Məhsul tapılmadı"
+  },
+  "favorites": {
+    "heading": "Sevimlilər",
+    "empty": "Hələ heç bir məhsulu sevimlilərə əlavə etməmisiniz."
+  },
+  "calculator": {
+    "heading": "Qızıl Qiyməti Hesablayıcısı",
+    "intro": "Qiymətlər bugünkü bazar məzənnəsinə əsasən hesablanır.",
+    "purityLabel": "Qızılın əyarı",
+    "weightLabel": "Çəki (qramla)",
+    "resultLabel": "Təxmini dəyər",
+    "disclaimer": "Bu, qızılın öz dəyəridir — hazır məhsulun qiyməti işçilik və dizayn xərcinə görə fərqli ola bilər.",
+    "contactCta": "Sifariş üçün əlaqə →"
+  },
+  "about": {
+    "heading": "Haqqımızda",
+    "story": "Anar Jewellery Bakının ürəyində, zərgərlik sənətinə bağlılıqla fəaliyyət göstərir. Hər bir məhsulumuz yüksək keyfiyyət və etibar prinsipi ilə hazırlanır.",
+    "addressHeading": "Ünvan",
+    "phoneLabel": "Telefon",
+    "instagramLabel": "Instagram",
+    "hoursHeading": "İş saatları"
+  }
+}

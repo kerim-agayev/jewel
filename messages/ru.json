@@ -1,1 +1,108 @@
-{}
+{
+  "nav": {
+    "home": "Главная",
+    "categories": "Категории",
+    "lookbook": "Наши модели",
+    "calculator": "Калькулятор",
+    "about": "О нас",
+    "address": "Адрес",
+    "contact": "Контакты",
+    "favorites": "Избранное",
+    "adminLogin": "Вход для персонала"
+  },
+  "footer": {
+    "tagline": "Адрес изящества и доверия.",
+    "linksHeading": "Ссылки",
+    "contactHeading": "Контакты",
+    "workingHours": "Часы работы",
+    "workingHoursValue": "Пн–Пт 10:00–19:00, Сб 10:00–17:00, Вс выходной (TODO: требует подтверждения владельца)",
+    "copyright": "© 2026 Anar Jewellery"
+  },
+  "common": {
+    "whatsappCta": "Написать в WhatsApp",
+    "callCta": "Позвонить",
+    "instagram": "Instagram",
+    "azn": "AZN"
+  },
+  "ticker": {
+    "label": "Сегодняшняя цена золота",
+    "karatSuffix": "проба"
+  },
+  "home": {
+    "heroTitle": "Адрес изящества и",
+    "heroTitleAccent": "доверия",
+    "heroSubtitle": "Сделайте каждый момент особенным с высококачественными золотыми украшениями, продуманными до мельчайших деталей.",
+    "heroCta": "Открыть коллекцию",
+    "trust1Title": "Бесплатная доставка",
+    "trust1Sub": "Быстро и безопасно",
+    "trust2Title": "Обмен старого золота",
+    "trust2Sub": "На выгодных условиях",
+    "trust3Title": "Гарантия подлинности",
+    "trust3Sub": "Официально сертифицированные изделия",
+    "categoriesHeading": "Категории",
+    "newArrivalsHeading": "Новинки",
+    "viewAll": "Смотреть все →"
+  },
+  "category": {
+    "filters": "Фильтры",
+    "metalType": "Тип металла",
+    "purity": "Проба",
+    "stoneType": "Тип камня",
+    "stoneless": "Без камня",
+    "status": "Состояние",
+    "sortLabel": "Сортировать",
+    "sortPriceAsc": "Цена (по возрастанию)",
+    "sortPriceDesc": "Цена (по убыванию)",
+    "sortNewest": "Новинки",
+    "sortPopularity": "Популярность",
+    "noResults": "По этим фильтрам товары не найдены",
+    "resultsCount": "{count} товаров"
+  },
+  "metalType": {
+    "YELLOW_GOLD": "Жёлтое золото",
+    "WHITE_GOLD": "Белое золото",
+    "ROSE_GOLD": "Розовое золото",
+    "PLATINUM": "Платина",
+    "SILVER": "Серебро",
+    "GOLD_PLATED_SILVER": "Позолоченное серебро",
+    "STEEL": "Сталь",
+    "BIJOUTERIE": "Бижутерия"
+  },
+  "productStatus": {
+    "NEW": "Новое",
+    "USED": "Б/у"
+  },
+  "product": {
+    "goldValue": "Стоимость золота",
+    "laborCost": "Стоимость работы",
+    "stoneCost": "Камень",
+    "total": "Итого",
+    "specsHeading": "Характеристики товара",
+    "category": "Категория",
+    "weight": "Вес",
+    "code": "Код",
+    "similarHeading": "Похожие товары",
+    "notFound": "Товар не найден"
+  },
+  "favorites": {
+    "heading": "Избранное",
+    "empty": "Вы ещё не добавили товары в избранное."
+  },
+  "calculator": {
+    "heading": "Калькулятор цены золота",
+    "intro": "Цены рассчитываются по сегодняшнему рыночному курсу.",
+    "purityLabel": "Проба золота",
+    "weightLabel": "Вес (в граммах)",
+    "resultLabel": "Примерная стоимость",
+    "disclaimer": "Это стоимость самого золота — цена готового изделия может отличаться из-за стоимости работы и дизайна.",
+    "contactCta": "Связаться для заказа →"
+  },
+  "about": {
+    "heading": "О нас",
+    "story": "Anar Jewellery работает в самом сердце Баку, с преданностью ювелирному искусству. Каждое наше изделие создаётся с высоким качеством и надёжностью.",
+    "addressHeading": "Адрес",
+    "phoneLabel": "Телефон",
+    "instagramLabel": "Instagram",
+    "hoursHeading": "Часы работы"
+  }
+}
